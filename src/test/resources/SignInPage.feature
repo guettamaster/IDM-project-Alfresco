@@ -5,3 +5,7 @@ Feature: testing signin page
     And filled fields valid data
     When click on Login button
     Then home page is opened
+
+
+
+
