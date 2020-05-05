@@ -15,9 +15,25 @@ public class EndUserSteps extends ScenarioSteps {
 
     SignInPage signinPage;
 
-    //======================================================SignInPage======================================================
+    //======================================================SignInPage===================================================
 
+    @Step
+    public void openSignInPage() {
+        signinPage.open();
+    }
 
+    @Step
+    public void loginAsuser() {
+        signinPage.loginAsuser();
+    }
 
+    @Step
+    public void clickOnLoginButton() {
+        signinPage.clickOnLoginButton();
+    }
 
+    @Step
+    public void homePageIsOpened() {
+        Assert.assertTrue("False", signinPage.homePageIsOpened());
+    }
 }

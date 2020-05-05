@@ -18,4 +18,23 @@ public class DefinitionSteps {
 
 //======================================================SignInPage======================================================
 
+    @Given("^open signin page$")
+    public void openSignInPage(){
+        endUserSteps.openSignInPage();
+    }
+
+    @And("^filled fields valid data$")
+    public void filledFieldsValidData() throws Throwable {
+        endUserSteps.loginAsuser();
+    }
+
+    @When("^click on Login button$")
+    public void clickOnLoginButton() throws Throwable {
+        endUserSteps.clickOnLoginButton();
+    }
+
+    @Then("^home page is opened$")
+    public void homePageIsOpened() {
+        endUserSteps.homePageIsOpened();
+    }
 }
