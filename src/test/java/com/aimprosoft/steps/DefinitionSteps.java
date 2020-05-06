@@ -47,4 +47,19 @@ public class DefinitionSteps {
     public void filledFieldsValidDataByAdmin() {
         endUserSteps.loginAsadmin();
     }
+
+    @When("^click on the \"([^\"]*)\" link at the header$")
+    public void clickOnTheLinkAtTheHeader(String arg0) throws Throwable {
+        endUserSteps.clickOnTheLinkAtTheHeader(arg0);
+    }
+
+    @Then("^\"([^\"]*)\" page is displayed$")
+    public void pageIsDisplayed(String arg0) throws Throwable {
+        endUserSteps.pageIsDisplayed(arg0);
+    }
+
+    @When("^click on the \"([^\"]*)\" link in the left panel$")
+    public void clickOnTheLinkInTheLeftPanel(String arg0) throws Throwable {
+        endUserSteps.clickOnTheLinkInTheLeftPanel(arg0);
+    }
 }

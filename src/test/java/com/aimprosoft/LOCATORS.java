@@ -8,13 +8,16 @@ public interface LOCATORS {
     String USER_NAME_FIELD = "//input[@placeholder='User Name']";
     String PASSWORD_FIELD = "//input[@placeholder='Password']";
     String SIGNIN_BUTTON = "//button[.='Sign In']";
-    String HOME_PAGE_LINK = "//a[.='Home']";
-    String USER_NAME_AFTER_AUTHORIZATION = "//span[@data-dojo-attach-point][.='$1']";
 
 //TODO======================================================HomePage==========================================================
 
+    String HOME_PAGE_LINK = "//a[.='Home']";
+    String USER_NAME_AFTER_AUTHORIZATION = "//span[@data-dojo-attach-point][.='$1']";
+    String ADMIN_TOOLS_LINK = "//a[@class='alfresco-navigation-_HtmlAnchorMixin'][contains(text(),'$1')]";
 
+//TODO======================================================AdminToolsPage====================================================
 
-
+    String ADMIN_TOOLS_TITLE = "//span[@class='alfresco-header-Title__text has-max-width'][contains(text(),'$1')]";
+    String GROUPS_LINK = "//a[@title='Group Management'][contains(text(),'$1')]";
 
 }

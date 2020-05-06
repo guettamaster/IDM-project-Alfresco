@@ -1,19 +1,15 @@
 package com.aimprosoft.steps.serenity;
 
-import com.aimprosoft.LOCATORS;
+import com.aimprosoft.pages.GroupPage;
 import com.aimprosoft.pages.SignInPage;
-import net.serenitybdd.core.Serenity;
 import net.thucydides.core.annotations.Step;
 import net.thucydides.core.steps.ScenarioSteps;
 import org.junit.Assert;
 
-import java.net.URISyntaxException;
-import java.text.ParseException;
-import java.util.Map;
-
 public class EndUserSteps extends ScenarioSteps {
 
     SignInPage signinPage;
+    GroupPage groupPage;
 
     //======================================================SignInPage===================================================
 
@@ -45,5 +41,20 @@ public class EndUserSteps extends ScenarioSteps {
     @Step
     public void loginAsadmin() {
         signinPage.loginAsadmin();
+    }
+
+    @Step
+    public void clickOnTheLinkAtTheHeader(String arg0) {
+        groupPage.clickOnTheLinkAtTheHeader(arg0);
+    }
+
+    @Step
+    public void pageIsDisplayed(String arg0) {
+        Assert.assertTrue("False", groupPage.pageIsDisplayed(arg0));
+    }
+
+    @Step
+    public void clickOnTheLinkInTheLeftPanel(String arg0) {
+        groupPage.clickOnTheLinkInTheLeftPanel(arg0);
     }
 }
