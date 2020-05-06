@@ -34,4 +34,16 @@ public class SignInPage extends net.serenitybdd.core.pages.PageObject {
         withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(net.serenitybdd.core.annotations.findby.By.xpath(LOCATORS.HOME_PAGE_LINK)));
         return $(LOCATORS.HOME_PAGE_LINK).isPresent();
     }
+
+    public boolean userNameIsDisplayed(String arg0) {
+        return $(LOCATORS.USER_NAME_AFTER_AUTHORIZATION.replace("$1", arg0)).isPresent();
+    }
+
+    public void loginAsadmin() {
+        String email = "admin";
+        String password = "!t52p6FYy";
+        logger.info("Entering email: " + email + " and password: " + password);
+        $(LOCATORS.USER_NAME_FIELD).sendKeys(email);
+        $(LOCATORS.PASSWORD_FIELD).sendKeys(password);
+    }
 }

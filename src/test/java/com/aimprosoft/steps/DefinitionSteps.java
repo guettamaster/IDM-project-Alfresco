@@ -37,4 +37,14 @@ public class DefinitionSteps {
     public void homePageIsOpened() {
         endUserSteps.homePageIsOpened();
     }
+
+    @Then("^\"([^\"]*)\" user name is displayed$")
+    public void userNameIsDisplayed(String arg0) throws Throwable {
+        endUserSteps.userNameIsDisplayed(arg0);
+    }
+
+    @And("^filled fields valid data by admin$")
+    public void filledFieldsValidDataByAdmin() {
+        endUserSteps.loginAsadmin();
+    }
 }
