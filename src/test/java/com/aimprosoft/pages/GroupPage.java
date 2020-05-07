@@ -29,4 +29,8 @@ public class GroupPage extends net.serenitybdd.core.pages.PageObject {
         evaluateJavascript("arguments[0].click();", $(LOCATORS.GROUPS_LINK.replace("$1", arg0)));
         waitABit(10000);
     }
+
+//    public boolean subPageIsDisplayed(String arg0) {
+//
+//    }
 }

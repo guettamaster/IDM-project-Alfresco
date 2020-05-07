@@ -62,4 +62,9 @@ public class DefinitionSteps {
     public void clickOnTheLinkInTheLeftPanel(String arg0) throws Throwable {
         endUserSteps.clickOnTheLinkInTheLeftPanel(arg0);
     }
+
+//    @Then("^\"([^\"]*)\" sub-page is displayed$")
+//    public void subPageIsDisplayed(String arg0) throws Throwable {
+//        endUserSteps.subPageIsDisplayed(arg0);
+//    }
 }

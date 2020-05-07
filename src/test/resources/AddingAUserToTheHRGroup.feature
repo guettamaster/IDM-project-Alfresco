@@ -11,4 +11,4 @@ Feature: adding a user to the HR group
     When click on the "Admin Tools" link at the header
     Then "Admin Tools" page is displayed
     When click on the "Groups" link in the left panel
-    Then "Group" sub-page is displayed
+#    Then "Group" sub-page is displayed

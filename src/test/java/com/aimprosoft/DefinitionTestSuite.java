@@ -5,7 +5,7 @@ import net.serenitybdd.cucumber.CucumberWithSerenity;
 import org.junit.runner.RunWith;
 
 @RunWith(CucumberWithSerenity.class)
-@CucumberOptions(features= {//"src/test/resources/SignInPage.feature",
-        "src/test/resources/HomePage.feature"
+@CucumberOptions(features= {"src/test/resources/SignInPage.feature"
+
 })
 public class DefinitionTestSuite {}
