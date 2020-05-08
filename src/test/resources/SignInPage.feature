@@ -6,8 +6,3 @@ Feature: verifying user authorization
     When click on Login button
     Then home page is opened
     Then "Oleg Ivankovckyi" user name is displayed
-
-
-
-
-

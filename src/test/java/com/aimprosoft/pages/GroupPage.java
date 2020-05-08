@@ -31,6 +31,7 @@ public class GroupPage extends net.serenitybdd.core.pages.PageObject {
     }
 
 //    public boolean subPageIsDisplayed(String arg0) {
-//
+//        withTimeoutOf(10, TimeUnit.SECONDS).waitFor(ExpectedConditions.presenceOfElementLocated(By.xpath(LOCATORS..replace("$1", arg0))));
+//        return $(LOCATORS..replace("$1", arg0)).isPresent();
 //    }
 }

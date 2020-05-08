@@ -20,4 +20,5 @@ public interface LOCATORS {
     String ADMIN_TOOLS_TITLE = "//span[@class='alfresco-header-Title__text has-max-width'][contains(text(),'$1')]";
     String GROUPS_LINK = "//a[@title='Group Management'][contains(text(),'$1')]";
 
+
 }
