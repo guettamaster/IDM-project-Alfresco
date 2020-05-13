@@ -30,8 +30,13 @@ public class GroupPage extends net.serenitybdd.core.pages.PageObject {
         waitABit(10000);
     }
 
-//    public boolean subPageIsDisplayed(String arg0) {
-//        withTimeoutOf(10, TimeUnit.SECONDS).waitFor(ExpectedConditions.presenceOfElementLocated(By.xpath(LOCATORS..replace("$1", arg0))));
-//        return $(LOCATORS..replace("$1", arg0)).isPresent();
-//    }
+    public boolean subPageIsDisplayed(String arg0) {
+        withTimeoutOf(10, TimeUnit.SECONDS).waitFor(ExpectedConditions.presenceOfElementLocated(By.xpath(LOCATORS.GROUPS_TITLE.replace("$1", arg0))));
+        return $(LOCATORS.GROUPS_TITLE.replace("$1", arg0)).isPresent();
+    }
+
+    public boolean searchFieldIsDisplayed() {
+        withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(net.serenitybdd.core.annotations.findby.By.xpath(LOCATORS.SEARCH_FIELD)));
+        return $(LOCATORS.SEARCH_FIELD).isPresent();
+    }
 }

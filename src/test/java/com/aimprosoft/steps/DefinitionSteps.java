@@ -63,8 +63,13 @@ public class DefinitionSteps {
         endUserSteps.clickOnTheLinkInTheLeftPanel(arg0);
     }
 
-//    @Then("^\"([^\"]*)\" sub-page is displayed$")
-//    public void subPageIsDisplayed(String arg0) throws Throwable {
-//        endUserSteps.subPageIsDisplayed(arg0);
-//    }
+    @Then("^\"([^\"]*)\" sub-page is displayed$")
+    public void subPageIsDisplayed(String arg0) throws Throwable {
+        endUserSteps.subPageIsDisplayed(arg0);
+    }
+
+    @Then("^Search field is displayed$")
+    public void searchFieldIsDisplayed() {
+        endUserSteps.searchFieldIsDisplayed();
+    }
 }

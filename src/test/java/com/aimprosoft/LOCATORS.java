@@ -19,6 +19,7 @@ public interface LOCATORS {
 
     String ADMIN_TOOLS_TITLE = "//span[@class='alfresco-header-Title__text has-max-width'][contains(text(),'$1')]";
     String GROUPS_LINK = "//a[@title='Group Management'][contains(text(),'$1')]";
-
+    String GROUPS_TITLE = "//label[@for='page_x002e_ctool_x002e_admin-console_x0023_default-search-text'][contains(text(),'$1')]";
+    String SEARCH_FIELD = "//input[@id='page_x002e_ctool_x002e_admin-console_x0023_default-search-text']";
 
 }

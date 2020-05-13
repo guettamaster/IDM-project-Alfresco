@@ -11,4 +11,13 @@ Feature: adding a user to the HR group
     When click on the "Admin Tools" link at the header
     Then "Admin Tools" page is displayed
     When click on the "Groups" link in the left panel
-#    Then "Group" sub-page is displayed
+    Then "Groups" sub-page is displayed
+
+  Scenario: 2.003 Check that user is added to the HR group
+    When click on the "Admin Tools" link at the header
+    Then "Admin Tools" page is displayed
+    When click on the "Groups" link in the left panel
+    Then "Groups" sub-page is displayed
+    Then Search field is displayed
+    When enter "HR Manager" in the Search field
+    When click on the Browse button

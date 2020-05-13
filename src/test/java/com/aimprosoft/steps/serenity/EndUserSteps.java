@@ -58,8 +58,13 @@ public class EndUserSteps extends ScenarioSteps {
         groupPage.clickOnTheLinkInTheLeftPanel(arg0);
     }
 
-//    @Step
-//    public void subPageIsDisplayed(String arg0) {
-//        Assert.assertTrue("False", groupPage.subPageIsDisplayed(arg0));
-//    }
+    @Step
+    public void subPageIsDisplayed(String arg0) {
+        Assert.assertTrue("False", groupPage.subPageIsDisplayed(arg0));
+    }
+
+    @Step
+    public void searchFieldIsDisplayed() {
+        Assert.assertTrue("False", groupPage.searchFieldIsDisplayed());
+    }
 }
