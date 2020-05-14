@@ -67,4 +67,65 @@ public class EndUserSteps extends ScenarioSteps {
     public void searchFieldIsDisplayed() {
         Assert.assertTrue("False", groupPage.searchFieldIsDisplayed());
     }
+
+    @Step
+    public void enterInTheSearchField(String arg0) {
+        groupPage.enterInTheSearchField(arg0);
+    }
+
+    @Step
+    public void clickOnTheBrowseButton() {
+        groupPage.clickOnTheBrowseButton();
+    }
+
+    @Step
+    public void groupIsDisplayedInTheTable(String arg0) {
+        Assert.assertTrue("False", groupPage.groupIsDisplayedInTheTable(arg0));
+    }
+
+    @Step
+    public void clickOnTheGroup(String arg0) {
+        groupPage.clickOnTheGroup(arg0);
+    }
+
+    @Step
+    public void usersBlockIsDisplayed() {
+        Assert.assertTrue("False", groupPage.usersBlockIsDisplayed());
+    }
+
+    @Step
+    public void clickOnTheAddUserIcon() {
+        groupPage.clickOnTheAddUserIcon();
+    }
+
+    @Step
+    public void addUserPopUpIsAppeared() {
+        Assert.assertTrue("False", groupPage.addUserPopUpIsAppeared());
+    }
+
+    @Step
+    public void enterInTheSearchForUsersField(String arg0) {
+        groupPage.enterInTheSearchForUsersField(arg0);
+    }
+
+    @Step
+    public void clickOnTheSearchButton() {
+        groupPage.clickOnTheSearchButton();
+    }
+
+    @Step
+    public void userNameIsDisplayedInTheAddUserPopUp(String arg0) {
+        Assert.assertTrue("False", groupPage.userNameIsDisplayedInTheAddUserPopUp(arg0));
+    }
+
+    @Step
+    public void clickOnTheAddButton() {
+        groupPage.clickOnTheAddButton();
+    }
+
+    @Step
+    public void messageIsDisplayed(String arg0) {
+        Assert.assertTrue("False", groupPage.messageIsDisplayed(arg0));
+        groupPage.waitMessageIsClosed();
+    }
 }

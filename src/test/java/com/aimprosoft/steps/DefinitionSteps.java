@@ -72,4 +72,64 @@ public class DefinitionSteps {
     public void searchFieldIsDisplayed() {
         endUserSteps.searchFieldIsDisplayed();
     }
+
+    @When("^enter \"([^\"]*)\" in the Search field$")
+    public void enterInTheSearchField(String arg0) throws Throwable {
+        endUserSteps.enterInTheSearchField(arg0);
+    }
+
+    @When("^click on the Browse button$")
+    public void clickOnTheBrowseButton() {
+        endUserSteps.clickOnTheBrowseButton();
+    }
+
+    @Then("^\"([^\"]*)\" group is displayed in the table$")
+    public void groupIsDisplayedInTheTable(String arg0) throws Throwable {
+        endUserSteps.groupIsDisplayedInTheTable(arg0);
+    }
+
+    @When("^click on the \"([^\"]*)\" group$")
+    public void clickOnTheGroup(String arg0) throws Throwable {
+        endUserSteps.clickOnTheGroup(arg0);
+    }
+
+    @Then("^users block is displayed$")
+    public void usersBlockIsDisplayed() {
+        endUserSteps.usersBlockIsDisplayed();
+    }
+
+    @When("^click on the Add User icon$")
+    public void clickOnTheAddUserIcon() {
+        endUserSteps.clickOnTheAddUserIcon();
+    }
+
+    @Then("^Add User pop-up is appeared$")
+    public void addUserPopUpIsAppeared() {
+        endUserSteps.addUserPopUpIsAppeared();
+    }
+
+    @When("^enter \"([^\"]*)\" in the Search for users field$")
+    public void enterInTheSearchForUsersField(String arg0) throws Throwable {
+        endUserSteps.enterInTheSearchForUsersField(arg0);
+    }
+
+    @When("^click on the Search button$")
+    public void clickOnTheSearchButton() {
+        endUserSteps.clickOnTheSearchButton();
+    }
+
+    @Then("^\"([^\"]*)\" user name is displayed in the Add User pop-up$")
+    public void userNameIsDisplayedInTheAddUserPopUp(String arg0) throws Throwable {
+        endUserSteps.userNameIsDisplayedInTheAddUserPopUp(arg0);
+    }
+
+    @When("^click on the Add button$")
+    public void clickOnTheAddButton() {
+        endUserSteps.clickOnTheAddButton();
+    }
+
+    @Then("^\"([^\"]*)\" message is displayed$")
+    public void messageIsDisplayed(String arg0) throws Throwable {
+        endUserSteps.messageIsDisplayed(arg0);
+    }
 }
