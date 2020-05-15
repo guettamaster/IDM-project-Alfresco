@@ -128,4 +128,29 @@ public class EndUserSteps extends ScenarioSteps {
         Assert.assertTrue("False", groupPage.messageIsDisplayed(arg0));
         groupPage.waitMessageIsClosed();
     }
+
+    @Step
+    public void userIsAddedToTheUsersBlock(String arg0) {
+        Assert.assertTrue("False", groupPage.userIsAddedToTheUsersBlock(arg0));
+    }
+
+    @Step
+    public void clickOnRemoveIconOnTheUserName(String arg0) {
+        groupPage.clickOnRemoveIconOnTheUserName(arg0);
+    }
+
+    @Step
+    public void removeUserFromGroupPopUpIsAppeared() {
+        Assert.assertTrue("False", groupPage.removeUserFromGroupPopUpIsAppeared());
+    }
+
+    @Step
+    public void clickOnTheYesButton() {
+        groupPage.clickOnTheYesButton();
+    }
+
+    @Step
+    public void userIsRemovedFromTheGroup(String arg0) {
+        Assert.assertTrue("False", groupPage.userIsRemovedFromTheGroup(arg0));
+    }
 }

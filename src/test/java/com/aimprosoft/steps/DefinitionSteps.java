@@ -132,4 +132,29 @@ public class DefinitionSteps {
     public void messageIsDisplayed(String arg0) throws Throwable {
         endUserSteps.messageIsDisplayed(arg0);
     }
+
+    @Then("^\"([^\"]*)\" user is added to the users block$")
+    public void userIsAddedToTheUsersBlock(String arg0) throws Throwable {
+        endUserSteps.userIsAddedToTheUsersBlock(arg0);
+    }
+
+    @When("^click on remove icon on the \"([^\"]*)\" user name$")
+    public void clickOnRemoveIconOnTheUserName(String arg0) throws Throwable {
+        endUserSteps.clickOnRemoveIconOnTheUserName(arg0);
+    }
+
+    @Then("^Remove User from Group pop-up is appeared$")
+    public void removeUserFromGroupPopUpIsAppeared() {
+        endUserSteps.removeUserFromGroupPopUpIsAppeared();
+    }
+
+    @When("^click on the Yes button$")
+    public void clickOnTheYesButton() {
+        endUserSteps.clickOnTheYesButton();
+    }
+
+    @Then("^\"([^\"]*)\" user is removed from the group$")
+    public void userIsRemovedFromTheGroup(String arg0) throws Throwable {
+        endUserSteps.userIsRemovedFromTheGroup(arg0);
+    }
 }

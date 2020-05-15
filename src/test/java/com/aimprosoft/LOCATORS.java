@@ -27,11 +27,14 @@ public interface LOCATORS {
     String ADD_USER_ICON = "//span[@title='Add User']";
     String ADD_USER_TITLE_IN_POPUP = "//span[contains(text(),'Add User')]";
     String SEARCH_FOR_USERS_FIELD = "//input[@id='page_x002e_ctool_x002e_admin-console_x0023_default-search-peoplefinder-search-text']";
+    String SEARCH_BUTTON = "//button[@id='page_x002e_ctool_x002e_admin-console_x0023_default-search-peoplefinder-search-button-button'][.='Search']";
     String USER_NAME_IN_THE_ADD_USER_POPUP = "//span[@class='lighter'][contains(text(),'$1')]";
     String ADD_BUTTON = "//button[.='Add ']";
-    String TEMPORARY_MESSAGE = "//span[contains(text(),'Successfully added user 'Oleg Ivankovckyi'.')]";
-
-    //input[@type='text'][@placeholder='Search for users...']
+    String TEMPORARY_MESSAGE = "//span[contains(text(),'$1')]";
+    String ADDED_USER_NAME = "//span[@class='yui-columnbrowser-item-label'][contains(text(),'$1')]";
+    String REMOVE_ICON_NEAR_USER_NAME = "//span[@class='yui-columnbrowser-item-label'][contains(text(),'$1')]//ancestor::a//span[@title='Remove User']";
+    String REMOVE_USER_FROM_GROUP_TITLE_IN_POPUP = "//div[contains(text(),'Remove User from Group')]";
+    String YES_BUTTON_IN_THE_REMOVE_USER_FROM_GROUP_POPUP = "//button[.='Yes']";
 
 
 }

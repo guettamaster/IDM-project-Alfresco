@@ -30,5 +30,5 @@ Feature: adding a user to the HR group
     When click on the Search button
     Then "o.ivankovckyi" user name is displayed in the Add User pop-up
     When click on the Add button
-    Then "Successfully added user 'Oleg Ivankovckyi'." message is displayed
-#    Then "o.ivankovckyi" user is added to the users block
+#    Then "Successfully added user 'Oleg Ivankovckyi'." message is displayed
+    Then "o.ivankovckyi" user is added to the users block

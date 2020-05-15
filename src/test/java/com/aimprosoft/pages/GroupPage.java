@@ -17,7 +17,6 @@ public class GroupPage extends net.serenitybdd.core.pages.PageObject {
 
     private static Logger logger = LoggerFactory.getLogger(GroupPage.class);
 
-
     public void clickOnTheLinkAtTheHeader(String arg0) {
         evaluateJavascript("arguments[0].click();", $(LOCATORS.ADMIN_TOOLS_LINK.replace("$1", arg0)));
     }
@@ -84,11 +83,7 @@ public class GroupPage extends net.serenitybdd.core.pages.PageObject {
 
     public void clickOnTheSearchButton() {
         JavascriptExecutor js = (JavascriptExecutor) getDriver();
-        js.executeScript("arguments[0].click();", findBy(LOCATORS.SEARCH_FOR_USERS_FIELD));
-
-
-//        withTimeoutOf(5, TimeUnit.SECONDS);
-//        evaluateJavascript("arguments[0].click();", $(LOCATORS.SEARCH_FOR_USERS_FIELD));
+        js.executeScript("arguments[0].click();", findBy(LOCATORS.SEARCH_BUTTON));
     }
 
     public boolean userNameIsDisplayedInTheAddUserPopUp(String arg0) {
@@ -107,5 +102,46 @@ public class GroupPage extends net.serenitybdd.core.pages.PageObject {
 
     public void waitMessageIsClosed() {
         withTimeoutOf(10, TimeUnit.SECONDS).waitFor(ExpectedConditions.invisibilityOfElementLocated(org.openqa.selenium.By.xpath("//div[@id=\"message_mask\"]")));
+    }
+
+    public boolean userIsAddedToTheUsersBlock(String arg0) {
+        withTimeoutOf(10, TimeUnit.SECONDS).waitFor(ExpectedConditions.presenceOfElementLocated(By.xpath(LOCATORS.ADDED_USER_NAME.replace("$1", arg0))));
+        return $(LOCATORS.ADDED_USER_NAME.replace("$1", arg0)).isPresent();
+    }
+
+    public void clickOnRemoveIconOnTheUserName(String arg0) {
+        withTimeoutOf(10, TimeUnit.SECONDS).waitFor(ExpectedConditions.presenceOfElementLocated(org.openqa.selenium.By.xpath(LOCATORS.REMOVE_ICON_NEAR_USER_NAME.replace("$1", arg0))));
+        evaluateJavascript("arguments[0].click();", $(LOCATORS.REMOVE_ICON_NEAR_USER_NAME.replace("$1", arg0)));
+    }
+
+    public boolean removeUserFromGroupPopUpIsAppeared() {
+        withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(net.serenitybdd.core.annotations.findby.By.xpath(LOCATORS.REMOVE_USER_FROM_GROUP_TITLE_IN_POPUP)));
+        return $(LOCATORS.REMOVE_USER_FROM_GROUP_TITLE_IN_POPUP).isPresent();
+    }
+
+    public void clickOnTheYesButton() {
+        evaluateJavascript("arguments[0].click();", $(LOCATORS.YES_BUTTON_IN_THE_REMOVE_USER_FROM_GROUP_POPUP));
+    }
+
+    public boolean userIsRemovedFromTheGroup(String arg0) {
+        try {
+            System.out.println("wait that user is invisible");
+            withTimeoutOf(6, TimeUnit.SECONDS).waitFor(ExpectedConditions.invisibilityOfElementLocated(By.xpath(LOCATORS.ADDED_USER_NAME.replace("$1", arg0))));
+            System.out.println("Element is invisible");
+        } catch (Exception e) {
+            System.out.println("Element isn`t invisible");
+        }
+
+        try {
+            System.out.println("check that user is presented in the DOM");
+            withTimeoutOf(1, TimeUnit.SECONDS).waitFor(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath(LOCATORS.ADDED_USER_NAME.replace("$1", arg0))));
+            System.out.println("user is presented in the DOM");
+            System.out.println("check that user is visibility");
+            withTimeoutOf(1, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath(LOCATORS.ADDED_USER_NAME.replace("$1", arg0))));
+            System.out.println("user is visibility");
+            return false;
+        } catch (Exception e) {
+            return true;
+        }
     }
 }
