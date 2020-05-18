@@ -1,5 +1,6 @@
 package com.aimprosoft.steps.serenity;
 
+import com.aimprosoft.pages.DocumentPage;
 import com.aimprosoft.pages.GroupPage;
 import com.aimprosoft.pages.SignInPage;
 import net.thucydides.core.annotations.Step;
@@ -10,6 +11,7 @@ public class EndUserSteps extends ScenarioSteps {
 
     SignInPage signinPage;
     GroupPage groupPage;
+    DocumentPage documentPage;
 
     //======================================================SignInPage===================================================
 
@@ -152,5 +154,50 @@ public class EndUserSteps extends ScenarioSteps {
     @Step
     public void userIsRemovedFromTheGroup(String arg0) {
         Assert.assertTrue("False", groupPage.userIsRemovedFromTheGroup(arg0));
+    }
+
+    @Step
+    public void clickOnTheUserName(String arg0) {
+        documentPage.clickOnTheUserName(arg0);
+    }
+
+    @Step
+    public void userMenuIsAppeared() {
+        Assert.assertTrue("False", documentPage.userMenuIsAppeared());
+    }
+
+    @Step
+    public void clickMyProfileLink() {
+        documentPage.clickMyProfileLink();
+    }
+
+    @Step
+    public void userProfilePageIsOpened() {
+        Assert.assertTrue("False", documentPage.userProfilePageIsOpened());
+    }
+
+    @Step
+    public void clickTheLink(String arg0) {
+        documentPage.clickTheLink(arg0);
+    }
+
+    @Step
+    public void pageIsOpened(String arg0) {
+        Assert.assertTrue("False", documentPage.pageIsOpened(arg0));
+    }
+
+    @Step
+    public void generateDocumentsBlockIsDisplayed() {
+        Assert.assertTrue("False", documentPage.generateDocumentsBlockIsDisplayed());
+    }
+
+    @Step
+    public void generatedDocumentsBlockIsDisplayed() {
+        Assert.assertTrue("False", documentPage.generatedDocumentsBlockIsDisplayed());
+    }
+
+    @Step
+    public void clickOnTheTypeDropDownMenu() {
+        documentPage.clickOnTheTypeDropDownMenu();
     }
 }

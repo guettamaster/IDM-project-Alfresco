@@ -1,5 +1,7 @@
 package com.aimprosoft;
 
+import org.yecht.Data;
+
 public interface LOCATORS {
 
 
@@ -14,6 +16,8 @@ public interface LOCATORS {
     String HOME_PAGE_LINK = "//a[.='Home']";
     String USER_NAME_AFTER_AUTHORIZATION = "//span[@data-dojo-attach-point][.='$1']";
     String ADMIN_TOOLS_LINK = "//a[@class='alfresco-navigation-_HtmlAnchorMixin'][contains(text(),'$1')]";
+    String USER_MENU = "//div[@class='alf-menu-groups alf-header-menu-bar'][@aria-labelledby='HEADER_USER_MENU_POPUP_text']";
+    String MY_PROFLE_LINK = "//a[@class='alfresco-navigation-_HtmlAnchorMixin'][contains(text(),'My Profile')]";
 
 //TODO======================================================AdminToolsPage====================================================
 
@@ -36,5 +40,15 @@ public interface LOCATORS {
     String REMOVE_USER_FROM_GROUP_TITLE_IN_POPUP = "//div[contains(text(),'Remove User from Group')]";
     String YES_BUTTON_IN_THE_REMOVE_USER_FROM_GROUP_POPUP = "//button[.='Yes']";
 
+//TODO======================================================UserProfilePage===================================================
+
+    String USER_PROFILE_PAGE_TITLE = "//span[@class='alfresco-header-Title__text has-max-width'][contains(text(),'User Profile Page')]";
+    String LINK_ON_THE_PROFILE_PAGE = "//a[contains(@id,'template_x002e_toolbar_x002e_user-profile_x0023_default')][contains(text(),'$1')]";
+    String PAGE_ON_THE_PROFILE_PAGE = "//span[@class='alfresco-header-Title__text has-max-width'][contains(text(),'$1')]";
+    String GENERATE_DOCUMENTS_TITLE = "//div[@class='header-bar'][contains(text(),'Generate Documents')]";
+    String GENERATED_DOCUMENTS_TITLE = "//div[@class='header-bar'][contains(text(),'Generated Documents')]";
+    String TYPE_DROP_DOWN_MENU = "//select[@id='template_x002e_section1_x002e_employee-documents_x0023_default_templateType']";
+    String TEMPLATE_DROP_DOWN_MENU = "//select[@id='template_x002e_section1_x002e_employee-documents_x0023_default_template']";
+    String GENERATE_BUTTON = "(//button[.='Generate'])[2]";
 
 }

@@ -157,4 +157,49 @@ public class DefinitionSteps {
     public void userIsRemovedFromTheGroup(String arg0) throws Throwable {
         endUserSteps.userIsRemovedFromTheGroup(arg0);
     }
+
+    @When("^click on the \"([^\"]*)\" user name$")
+    public void clickOnTheUserName(String arg0) throws Throwable {
+        endUserSteps.clickOnTheUserName(arg0);
+    }
+
+    @Then("^user menu is appeared$")
+    public void userMenuIsAppeared() {
+        endUserSteps.userMenuIsAppeared();
+    }
+
+    @When("^click My Profile link$")
+    public void clickMyProfileLink() {
+        endUserSteps.clickMyProfileLink();
+    }
+
+    @Then("^User Profile page is opened$")
+    public void userProfilePageIsOpened() {
+        endUserSteps.userProfilePageIsOpened();
+    }
+
+    @When("^click the \"([^\"]*)\" link$")
+    public void clickTheLink(String arg0) throws Throwable {
+        endUserSteps.clickTheLink(arg0);
+    }
+
+    @Then("^\"([^\"]*)\" page is opened$")
+    public void pageIsOpened(String arg0) throws Throwable {
+        endUserSteps.pageIsOpened(arg0);
+    }
+
+    @Then("^Generate Documents block is displayed$")
+    public void generateDocumentsBlockIsDisplayed() {
+        endUserSteps.generateDocumentsBlockIsDisplayed();
+    }
+
+    @Then("^Generated Documents block is displayed$")
+    public void generatedDocumentsBlockIsDisplayed() {
+        endUserSteps.generatedDocumentsBlockIsDisplayed();
+    }
+
+    @When("^click on the Type drop-down menu$")
+    public void clickOnTheTypeDropDownMenu() {
+        endUserSteps.clickOnTheTypeDropDownMenu();
+    }
 }
