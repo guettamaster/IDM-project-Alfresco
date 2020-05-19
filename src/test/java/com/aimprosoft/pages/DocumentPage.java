@@ -1,6 +1,7 @@
 package com.aimprosoft.pages;
 
 import com.aimprosoft.LOCATORS;
+import cucumber.api.java.bs.A;
 import net.serenitybdd.core.Serenity;
 import net.serenitybdd.core.annotations.findby.By;
 import net.thucydides.core.annotations.DefaultUrl;
@@ -57,7 +58,29 @@ public class DocumentPage extends net.serenitybdd.core.pages.PageObject {
     }
 
     public void clickOnTheTypeDropDownMenu() {
-        waitABit(5000);
-        evaluateJavascript("arguments[0].click();", $(LOCATORS.TYPE_DROP_DOWN_MENU));
+        Actions actions = new Actions(getDriver());
+        actions.moveToElement(find(By.xpath(LOCATORS.TYPE_DROP_DOWN_MENU)));
+        actions.click().build().perform();
+    }
+
+    public void chooseTheПакетДокументовItem() {
+        withTimeoutOf(10, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(org.openqa.selenium.By.xpath(LOCATORS.OPTION_ITEM_FROM_THE_TYPE_DROP_DOWN_MENU)));
+        $(LOCATORS.OPTION_ITEM_FROM_THE_TYPE_DROP_DOWN_MENU).click();
+    }
+
+    public void clickOnTheTemplateDropDownMenu() {
+        Actions actions = new Actions(getDriver());
+        actions.moveToElement(find(By.xpath(LOCATORS.TEMPLATE_DROP_DOWN_MENU)));
+        actions.click().build().perform();
+    }
+
+    public void chooseTheДоговірПідрядуФінальнаВерсіяItem() {
+        withTimeoutOf(10, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(org.openqa.selenium.By.xpath(LOCATORS.OPTION_ITEM_FROM_THE_TEMPLATE_DROP_DOWN_MENU)));
+        $(LOCATORS.OPTION_ITEM_FROM_THE_TEMPLATE_DROP_DOWN_MENU).click();
+    }
+
+    public boolean documentsWillBeCreatedSectionIsAppeared() {
+        withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(net.serenitybdd.core.annotations.findby.By.xpath(LOCATORS.DOCUMENTS_WILL_BE_CREATED_TITLE)));
+        return $(LOCATORS.DOCUMENTS_WILL_BE_CREATED_TITLE).isPresent();
     }
 }

@@ -200,4 +200,24 @@ public class EndUserSteps extends ScenarioSteps {
     public void clickOnTheTypeDropDownMenu() {
         documentPage.clickOnTheTypeDropDownMenu();
     }
+
+    @Step
+    public void chooseTheПакетДокументовItem() {
+        documentPage.chooseTheПакетДокументовItem();
+    }
+
+    @Step
+    public void clickOnTheTemplateDropDownMenu() {
+        documentPage.clickOnTheTemplateDropDownMenu();
+    }
+
+    @Step
+    public void chooseTheДоговірПідрядуФінальнаВерсіяItem() {
+        documentPage.chooseTheДоговірПідрядуФінальнаВерсіяItem();
+    }
+
+    @Step
+    public void documentsWillBeCreatedSectionIsAppeared() {
+        Assert.assertTrue("False", documentPage.documentsWillBeCreatedSectionIsAppeared());
+    }
 }

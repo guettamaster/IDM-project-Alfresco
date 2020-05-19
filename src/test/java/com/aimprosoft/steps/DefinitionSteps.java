@@ -202,4 +202,24 @@ public class DefinitionSteps {
     public void clickOnTheTypeDropDownMenu() {
         endUserSteps.clickOnTheTypeDropDownMenu();
     }
+
+    @When("^choose the Пакет документов item$")
+    public void chooseTheПакетДокументовItem() {
+        endUserSteps.chooseTheПакетДокументовItem();
+    }
+
+    @When("^click on the Template drop-down menu$")
+    public void clickOnTheTemplateDropDownMenu() {
+        endUserSteps.clickOnTheTemplateDropDownMenu();
+    }
+
+    @When("^choose the Договір Підряду \\(фінальна версія\\) item$")
+    public void chooseTheДоговірПідрядуФінальнаВерсіяItem() {
+        endUserSteps.chooseTheДоговірПідрядуФінальнаВерсіяItem();
+    }
+
+    @Then("^Documents will be created section is appeared$")
+    public void documentsWillBeCreatedSectionIsAppeared() {
+        endUserSteps.documentsWillBeCreatedSectionIsAppeared();
+    }
 }

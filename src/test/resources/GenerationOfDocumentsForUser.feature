@@ -27,3 +27,9 @@ Feature: verifying document generation
     Then Generate Documents block is displayed
     Then Generated Documents block is displayed
     When click on the Type drop-down menu
+    When choose the Пакет документов item
+    When click on the Template drop-down menu
+    When choose the Договір Підряду (фінальна версія) item
+    Then Documents will be created section is appeared
+    When click on the Contractor drop-down menu
+    When choose the Флайтех item

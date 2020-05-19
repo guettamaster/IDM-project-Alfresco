@@ -47,8 +47,11 @@ public interface LOCATORS {
     String PAGE_ON_THE_PROFILE_PAGE = "//span[@class='alfresco-header-Title__text has-max-width'][contains(text(),'$1')]";
     String GENERATE_DOCUMENTS_TITLE = "//div[@class='header-bar'][contains(text(),'Generate Documents')]";
     String GENERATED_DOCUMENTS_TITLE = "//div[@class='header-bar'][contains(text(),'Generated Documents')]";
-    String TYPE_DROP_DOWN_MENU = "//select[@id='template_x002e_section1_x002e_employee-documents_x0023_default_templateType']";
+    String TYPE_DROP_DOWN_MENU = "//select[@id='template_x002e_section1_x002e_employee-documents_x0023_default_templateType'][@class='generate-documents-select']";
+    String OPTION_ITEM_FROM_THE_TYPE_DROP_DOWN_MENU = "//select[@id='template_x002e_section1_x002e_employee-documents_x0023_default_templateType'][@class='generate-documents-select']//option[.='Пакет документов']";
     String TEMPLATE_DROP_DOWN_MENU = "//select[@id='template_x002e_section1_x002e_employee-documents_x0023_default_template']";
+    String OPTION_ITEM_FROM_THE_TEMPLATE_DROP_DOWN_MENU = "//select[@id='template_x002e_section1_x002e_employee-documents_x0023_default_template'][@class='generate-documents-select']//option[.='Договір Підряду (фінальна версія)']";
+    String DOCUMENTS_WILL_BE_CREATED_TITLE = "//span[@class='label span-align'][contains(text(),'Documents will be created')]";
     String GENERATE_BUTTON = "(//button[.='Generate'])[2]";
 
 }
