@@ -33,3 +33,11 @@ Feature: verifying document generation
     Then Documents will be created section is appeared
     When click on the Contractor drop-down menu
     When choose the Флайтех item
+    When enter "1/5/2020" in the Contract Date field
+    When enter "2/5/2020" in the Дата завершення робіт field
+    When enter "3/5/2020" in the Дата закінчення договору field
+    When enter "4/5/2020" in the Дата передачі результатів роботи field
+    When enter "5/5/2020" in the Дата початку виконання робіт field
+    When enter "6/5/2020" in the Дата укладення угоди field
+    When enter "7/5/2020" in the Дата укладення замовлення field
+    When enter "150" in the Вартість замовлення field

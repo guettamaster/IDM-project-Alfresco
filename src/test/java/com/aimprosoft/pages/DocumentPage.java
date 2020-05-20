@@ -83,4 +83,22 @@ public class DocumentPage extends net.serenitybdd.core.pages.PageObject {
         withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(net.serenitybdd.core.annotations.findby.By.xpath(LOCATORS.DOCUMENTS_WILL_BE_CREATED_TITLE)));
         return $(LOCATORS.DOCUMENTS_WILL_BE_CREATED_TITLE).isPresent();
     }
+
+    public void clickOnTheContractorDropDownMenu() {
+        Actions actions = new Actions(getDriver());
+        actions.moveToElement(find(By.xpath(LOCATORS.CONTRACTOR_DROP_DOWN_MENU)));
+        actions.click().build().perform();
+    }
+
+    public void chooseTheФлайтехItem() {
+        withTimeoutOf(10, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(org.openqa.selenium.By.xpath(LOCATORS.OPTION_ITEM_FROM_THE_CONTRACTOR_DROP_DOWN_MENU)));
+        $(LOCATORS.OPTION_ITEM_FROM_THE_CONTRACTOR_DROP_DOWN_MENU).click();
+    }
+
+    public void enterInTheContractDateField(String arg0) {
+        Actions actions = new Actions(getDriver());
+        $(LOCATORS.CONTRACT_DATE_FIELD.replace("$1", arg0)).sendKeys(arg0);
+        actions.moveToElement(find(By.xpath(LOCATORS.CONTRACT_DATE_FIELD.replace("$1", arg0))));
+        actions.build().perform();
+    }
 }

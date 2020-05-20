@@ -220,4 +220,19 @@ public class EndUserSteps extends ScenarioSteps {
     public void documentsWillBeCreatedSectionIsAppeared() {
         Assert.assertTrue("False", documentPage.documentsWillBeCreatedSectionIsAppeared());
     }
+
+    @Step
+    public void clickOnTheContractorDropDownMenu() {
+        documentPage.clickOnTheContractorDropDownMenu();
+    }
+
+    @Step
+    public void chooseTheФлайтехItem() {
+        documentPage.chooseTheФлайтехItem();
+    }
+
+    @Step
+    public void enterInTheContractDateField(String arg0) {
+        documentPage.enterInTheContractDateField(arg0);
+    }
 }

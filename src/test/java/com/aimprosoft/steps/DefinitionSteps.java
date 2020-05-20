@@ -222,4 +222,19 @@ public class DefinitionSteps {
     public void documentsWillBeCreatedSectionIsAppeared() {
         endUserSteps.documentsWillBeCreatedSectionIsAppeared();
     }
+
+    @When("^click on the Contractor drop-down menu$")
+    public void clickOnTheContractorDropDownMenu() {
+        endUserSteps.clickOnTheContractorDropDownMenu();
+    }
+
+    @When("^choose the Флайтех item$")
+    public void chooseTheФлайтехItem() {
+        endUserSteps.chooseTheФлайтехItem();
+    }
+
+    @When("^enter \"([^\"]*)\" in the Contract Date field$")
+    public void enterInTheContractDateField(String arg0) throws Throwable {
+        endUserSteps.enterInTheContractDateField(arg0);
+    }
 }
