@@ -235,4 +235,39 @@ public class EndUserSteps extends ScenarioSteps {
     public void enterInTheContractDateField(String arg0) {
         documentPage.enterInTheContractDateField(arg0);
     }
+
+    @Step
+    public void enterInTheДатаЗавершенняРобітField(String arg0) {
+        documentPage.enterInTheДатаЗавершенняРобітField(arg0);
+    }
+
+    @Step
+    public void enterInTheДатаЗакінченняДоговоруField(String arg0) {
+        documentPage.enterInTheДатаЗакінченняДоговоруField(arg0);
+    }
+
+    @Step
+    public void enterInTheДатаПередачіРезультатівРоботиField(String arg0) {
+        documentPage.enterInTheДатаПередачіРезультатівРоботиField(arg0);
+    }
+
+    @Step
+    public void enterInTheДатаПочаткуВиконанняРобітField(String arg0) {
+        documentPage.enterInTheДатаПочаткуВиконанняРобітField(arg0);
+    }
+
+    @Step
+    public void enterInTheДатаУкладенняУгодиField(String arg0) {
+        documentPage.enterInTheДатаУкладенняУгодиField(arg0);
+    }
+
+    @Step
+    public void enterInTheДатаУкладенняЗамовленняField(String arg0) {
+        documentPage.enterInTheДатаУкладенняЗамовленняField(arg0);
+    }
+
+    @Step
+    public void enterInTheВартістьЗамовленняField(String arg0) {
+        documentPage.enterInTheВартістьЗамовленняField(arg0);
+    }
 }

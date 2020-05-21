@@ -101,4 +101,54 @@ public class DocumentPage extends net.serenitybdd.core.pages.PageObject {
         actions.moveToElement(find(By.xpath(LOCATORS.CONTRACT_DATE_FIELD.replace("$1", arg0))));
         actions.build().perform();
     }
+
+    public void enterInTheДатаЗавершенняРобітField(String arg0) {
+        Actions actions = new Actions(getDriver());
+        $(LOCATORS.ДАТА_ЗАВЕРШЕННЯ_РОБІТ_FIELD.replace("$1", arg0)).sendKeys(arg0);
+        actions.moveToElement(find(By.xpath(LOCATORS.ДАТА_ЗАВЕРШЕННЯ_РОБІТ_FIELD.replace("$1", arg0))));
+        actions.build().perform();
+    }
+
+    public void enterInTheДатаЗакінченняДоговоруField(String arg0) {
+        Actions actions = new Actions(getDriver());
+        $(LOCATORS.ДАТА_ЗАКІНЧЕННЯ_ДОГОВОРУ_FIELD.replace("$1", arg0)).sendKeys(arg0);
+        actions.moveToElement(find(By.xpath(LOCATORS.ДАТА_ЗАКІНЧЕННЯ_ДОГОВОРУ_FIELD.replace("$1", arg0))));
+        actions.build().perform();
+    }
+
+    public void enterInTheДатаПередачіРезультатівРоботиField(String arg0) {
+        Actions actions = new Actions(getDriver());
+        $(LOCATORS.ДАТА_ПЕРЕДАЧІ_РЕЗУЛЬТАТІВ_РОБОТИ.replace("$1", arg0)).sendKeys(arg0);
+        actions.moveToElement(find(By.xpath(LOCATORS.ДАТА_ПЕРЕДАЧІ_РЕЗУЛЬТАТІВ_РОБОТИ.replace("$1", arg0))));
+        actions.build().perform();
+    }
+
+    public void enterInTheДатаПочаткуВиконанняРобітField(String arg0) {
+        Actions actions = new Actions(getDriver());
+        $(LOCATORS.ДАТА_ПОЧАТКУ_ВИКОНАННЯ_РОБІТ.replace("$1", arg0)).sendKeys(arg0);
+        actions.moveToElement(find(By.xpath(LOCATORS.ДАТА_ПОЧАТКУ_ВИКОНАННЯ_РОБІТ.replace("$1", arg0))));
+        actions.build().perform();
+    }
+
+    public void enterInTheДатаУкладенняУгодиField(String arg0) {
+        Actions actions = new Actions(getDriver());
+        $(LOCATORS.ДАТА_УКЛАДАННЯ_УГОДИ.replace("$1", arg0)).sendKeys(arg0);
+        actions.moveToElement(find(By.xpath(LOCATORS.ДАТА_УКЛАДАННЯ_УГОДИ.replace("$1", arg0))));
+        actions.build().perform();
+    }
+
+    public void enterInTheДатаУкладенняЗамовленняField(String arg0) {
+        Actions actions = new Actions(getDriver());
+        $(LOCATORS.ДАТА_УКЛАДАННЯ_ЗАМОВЛЕННЯ.replace("$1", arg0)).sendKeys(arg0);
+        actions.moveToElement(find(By.xpath(LOCATORS.ДАТА_УКЛАДАННЯ_ЗАМОВЛЕННЯ.replace("$1", arg0))));
+        actions.build().perform();
+    }
+
+    public void enterInTheВартістьЗамовленняField(String arg0) {
+        Actions actions = new Actions(getDriver());
+        $(LOCATORS.ВАРТІСТЬ_ЗАМОВЛЕННЯ.replace("$1", arg0)).sendKeys(arg0);
+        actions.moveToElement(find(By.xpath(LOCATORS.ВАРТІСТЬ_ЗАМОВЛЕННЯ.replace("$1", arg0))));
+        actions.build().perform();
+        waitABit(5000);
+    }
 }

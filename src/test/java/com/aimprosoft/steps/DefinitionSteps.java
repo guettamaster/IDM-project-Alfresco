@@ -237,4 +237,39 @@ public class DefinitionSteps {
     public void enterInTheContractDateField(String arg0) throws Throwable {
         endUserSteps.enterInTheContractDateField(arg0);
     }
+
+    @When("^enter \"([^\"]*)\" in the Дата завершення робіт field$")
+    public void enterInTheДатаЗавершенняРобітField(String arg0) throws Throwable {
+        endUserSteps.enterInTheДатаЗавершенняРобітField(arg0);
+    }
+
+    @When("^enter \"([^\"]*)\" in the Дата закінчення договору field$")
+    public void enterInTheДатаЗакінченняДоговоруField(String arg0) throws Throwable {
+        endUserSteps.enterInTheДатаЗакінченняДоговоруField(arg0);
+    }
+
+    @When("^enter \"([^\"]*)\" in the Дата передачі результатів роботи field$")
+    public void enterInTheДатаПередачіРезультатівРоботиField(String arg0) throws Throwable {
+        endUserSteps.enterInTheДатаПередачіРезультатівРоботиField(arg0);
+    }
+
+    @When("^enter \"([^\"]*)\" in the Дата початку виконання робіт field$")
+    public void enterInTheДатаПочаткуВиконанняРобітField(String arg0) throws Throwable {
+        endUserSteps.enterInTheДатаПочаткуВиконанняРобітField(arg0);
+    }
+
+    @When("^enter \"([^\"]*)\" in the Дата укладення угоди field$")
+    public void enterInTheДатаУкладенняУгодиField(String arg0) throws Throwable {
+        endUserSteps.enterInTheДатаУкладенняУгодиField(arg0);
+    }
+
+    @When("^enter \"([^\"]*)\" in the Дата укладення замовлення field$")
+    public void enterInTheДатаУкладенняЗамовленняField(String arg0) throws Throwable {
+        endUserSteps.enterInTheДатаУкладенняЗамовленняField(arg0);
+    }
+
+    @When("^enter \"([^\"]*)\" in the Вартість замовлення field$")
+    public void enterInTheВартістьЗамовленняField(String arg0) throws Throwable {
+        endUserSteps.enterInTheВартістьЗамовленняField(arg0);
+    }
 }

@@ -41,3 +41,4 @@ Feature: verifying document generation
     When enter "6/5/2020" in the Дата укладення угоди field
     When enter "7/5/2020" in the Дата укладення замовлення field
     When enter "150" in the Вартість замовлення field
+#    When click on Generate button

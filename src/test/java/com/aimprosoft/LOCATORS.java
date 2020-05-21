@@ -58,10 +58,10 @@ public interface LOCATORS {
     String CONTRACT_DATE_FIELD = "//input[@id='template_x002e_section1_x002e_employee-documents_x0023_default_field.contract.startDate-ctrl-date']";
     String ДАТА_ЗАВЕРШЕННЯ_РОБІТ_FIELD = "//input[@id='template_x002e_section1_x002e_employee-documents_x0023_default_field.commencementWork.endDate-ctrl-date']";
     String ДАТА_ЗАКІНЧЕННЯ_ДОГОВОРУ_FIELD = "//input[@id='template_x002e_section1_x002e_employee-documents_x0023_default_field.contract.endDate-ctrl-date']";
-    String ДАТА_ПЕРЕДАЧІ_РЕЗУЛЬТАТІВ_РОБОТИ = "";
-    String ДАТА_ПОЧАТКУ_ВИКОНАННЯ_РОБІТ = "";
-    String ДАТА_УКЛАДАННЯ_УГОДИ = "";
-    String ДАТА_УКЛАДАННЯ_ЗАМОВЛЕННЯ = "";
-    String ВАРТІСТЬ_ЗАМОВЛЕННЯ = "";
+    String ДАТА_ПЕРЕДАЧІ_РЕЗУЛЬТАТІВ_РОБОТИ = "//input[@id='template_x002e_section1_x002e_employee-documents_x0023_default_field.workResults.transferDate-ctrl-date']";
+    String ДАТА_ПОЧАТКУ_ВИКОНАННЯ_РОБІТ = "//input[@id='template_x002e_section1_x002e_employee-documents_x0023_default_field.commencementWork.startDate-ctrl-date']";
+    String ДАТА_УКЛАДАННЯ_УГОДИ = "//input[@id='template_x002e_section1_x002e_employee-documents_x0023_default_field.agreement.startDate-ctrl-date']";
+    String ДАТА_УКЛАДАННЯ_ЗАМОВЛЕННЯ = "//input[@id='template_x002e_section1_x002e_employee-documents_x0023_default_field.order.startDate-ctrl-date']";
+    String ВАРТІСТЬ_ЗАМОВЛЕННЯ = "//input[@id='template_x002e_section1_x002e_employee-documents_x0023_default_field.orderCost.number']";
 
 }
