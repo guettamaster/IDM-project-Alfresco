@@ -270,4 +270,39 @@ public class EndUserSteps extends ScenarioSteps {
     public void enterInTheВартістьЗамовленняField(String arg0) {
         documentPage.enterInTheВартістьЗамовленняField(arg0);
     }
+
+    @Step
+    public void clickOnGenerateButton() {
+        documentPage.clickOnGenerateButton();
+    }
+
+    @Step
+    public void chooseArchivePreviousVersionSCheckbox() {
+        documentPage.chooseArchivePreviousVersionSCheckbox();
+    }
+
+    @Step
+    public void договірПідрядуDocumentIsGenerated() {
+        Assert.assertTrue("False", documentPage.договірПідрядуDocumentIsGenerated());
+    }
+
+    @Step
+    public void додатокКомерційнаТаємницяIsGenerated() {
+        Assert.assertTrue("False", documentPage.додатокКомерційнаТаємницяIsGenerated());
+    }
+
+    @Step
+    public void замовленняIsGenerated() {
+        Assert.assertTrue("False", documentPage.замовленняIsGenerated());
+    }
+
+    @Step
+    public void documentSGeneratedSuccessfullyMessageInThePopUpIsAppeared() {
+        Assert.assertTrue("False", documentPage.documentSGeneratedSuccessfullyMessageInThePopUpIsAppeared());
+    }
+
+    @Step
+    public void clickOKButton() {
+        documentPage.clickOKButton();
+    }
 }

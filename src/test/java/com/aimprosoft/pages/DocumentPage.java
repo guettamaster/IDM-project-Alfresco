@@ -151,4 +151,37 @@ public class DocumentPage extends net.serenitybdd.core.pages.PageObject {
         actions.build().perform();
         waitABit(5000);
     }
+
+    public void clickOnGenerateButton() {
+        evaluateJavascript("arguments[0].click();", $(LOCATORS.GENERATE_BUTTON));
+    }
+
+    public void chooseArchivePreviousVersionSCheckbox() {
+        evaluateJavascript("arguments[0].click();", $(LOCATORS.ARCHIVE_PREVIOUS_VERSION_S));
+        waitABit(5000);
+    }
+
+    public boolean договірПідрядуDocumentIsGenerated() {
+        withTimeoutOf(25, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(net.serenitybdd.core.annotations.findby.By.xpath(LOCATORS.ДОГОВІР_ПІДРЯДУ_DOCUMENT)));
+        return $(LOCATORS.ДОГОВІР_ПІДРЯДУ_DOCUMENT).isPresent();
+    }
+
+    public boolean додатокКомерційнаТаємницяIsGenerated() {
+        withTimeoutOf(25, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(net.serenitybdd.core.annotations.findby.By.xpath(LOCATORS.ДОДАТОК_КОМЕРЦІЙНА_ТАЄМНИЦЯ_DOCUMENT)));
+        return $(LOCATORS.ДОДАТОК_КОМЕРЦІЙНА_ТАЄМНИЦЯ_DOCUMENT).isPresent();
+    }
+
+    public boolean замовленняIsGenerated() {
+        withTimeoutOf(25, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(net.serenitybdd.core.annotations.findby.By.xpath(LOCATORS.ЗАМОВЛЕННЯ_DOCUMENT)));
+        return $(LOCATORS.ЗАМОВЛЕННЯ_DOCUMENT).isPresent();
+    }
+
+    public boolean documentSGeneratedSuccessfullyMessageInThePopUpIsAppeared() {
+        withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(net.serenitybdd.core.annotations.findby.By.xpath(LOCATORS.DOCUMENT_S_GENERATED_SUCESSFULLY)));
+        return $(LOCATORS.DOCUMENT_S_GENERATED_SUCESSFULLY).isPresent();
+    }
+
+    public void clickOKButton() {
+        evaluateJavascript("arguments[0].click();", $(LOCATORS.OK_BUTTON_IN_THE_POPUP));
+    }
 }

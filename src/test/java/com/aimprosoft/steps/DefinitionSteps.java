@@ -272,4 +272,39 @@ public class DefinitionSteps {
     public void enterInTheВартістьЗамовленняField(String arg0) throws Throwable {
         endUserSteps.enterInTheВартістьЗамовленняField(arg0);
     }
+
+    @When("^click on Generate button$")
+    public void clickOnGenerateButton() {
+        endUserSteps.clickOnGenerateButton();
+    }
+
+    @When("^choose Archive previous version\\(s\\) checkbox$")
+    public void chooseArchivePreviousVersionSCheckbox() {
+        endUserSteps.chooseArchivePreviousVersionSCheckbox();
+    }
+
+    @Then("^Договір підряду document is generated$")
+    public void договірПідрядуDocumentIsGenerated() {
+        endUserSteps.договірПідрядуDocumentIsGenerated();
+    }
+
+    @Then("^Додаток комерційна таємниця is generated$")
+    public void додатокКомерційнаТаємницяIsGenerated() {
+        endUserSteps.додатокКомерційнаТаємницяIsGenerated();
+    }
+
+    @Then("^Замовлення is generated$")
+    public void замовленняIsGenerated() {
+        endUserSteps.замовленняIsGenerated();
+    }
+
+    @Then("^№ document\\(s\\) generated successfully message in the pop-up is appeared$")
+    public void documentSGeneratedSuccessfullyMessageInThePopUpIsAppeared() {
+        endUserSteps.documentSGeneratedSuccessfullyMessageInThePopUpIsAppeared();
+    }
+
+    @When("^click OK button$")
+    public void clickOKButton() {
+        endUserSteps.clickOKButton();
+    }
 }

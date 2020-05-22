@@ -52,7 +52,6 @@ public interface LOCATORS {
     String TEMPLATE_DROP_DOWN_MENU = "//select[@id='template_x002e_section1_x002e_employee-documents_x0023_default_template']";
     String OPTION_ITEM_FROM_THE_TEMPLATE_DROP_DOWN_MENU = "//select[@id='template_x002e_section1_x002e_employee-documents_x0023_default_template'][@class='generate-documents-select']//option[.='Договір Підряду (фінальна версія)']";
     String DOCUMENTS_WILL_BE_CREATED_TITLE = "//span[@class='label span-align'][contains(text(),'Documents will be created')]";
-    String GENERATE_BUTTON = "(//button[.='Generate'])[2]";
     String CONTRACTOR_DROP_DOWN_MENU = "//select[@id='template_x002e_section1_x002e_employee-documents_x0023_default_entities.contractor']";
     String OPTION_ITEM_FROM_THE_CONTRACTOR_DROP_DOWN_MENU = "//select[@id='template_x002e_section1_x002e_employee-documents_x0023_default_entities.contractor'][@name='entities.contractor']//option[.='Флайтех']";
     String CONTRACT_DATE_FIELD = "//input[@id='template_x002e_section1_x002e_employee-documents_x0023_default_field.contract.startDate-ctrl-date']";
@@ -63,5 +62,11 @@ public interface LOCATORS {
     String ДАТА_УКЛАДАННЯ_УГОДИ = "//input[@id='template_x002e_section1_x002e_employee-documents_x0023_default_field.agreement.startDate-ctrl-date']";
     String ДАТА_УКЛАДАННЯ_ЗАМОВЛЕННЯ = "//input[@id='template_x002e_section1_x002e_employee-documents_x0023_default_field.order.startDate-ctrl-date']";
     String ВАРТІСТЬ_ЗАМОВЛЕННЯ = "//input[@id='template_x002e_section1_x002e_employee-documents_x0023_default_field.orderCost.number']";
-
+    String ARCHIVE_PREVIOUS_VERSION_S = "//input[@id='template_x002e_section1_x002e_employee-documents_x0023_default_isArchivingEnabled-entry'][@class='checkbox-align ']";
+    String GENERATE_BUTTON = "(//button[.='Generate'])[2]";
+    String ДОГОВІР_ПІДРЯДУ_DOCUMENT = "//td[@headers]//a[contains(text(),'Договір підряду')]";
+    String ДОДАТОК_КОМЕРЦІЙНА_ТАЄМНИЦЯ_DOCUMENT = "//td[@headers]//a[contains(text(),'Додаток комерційна таємниця')]";
+    String ЗАМОВЛЕННЯ_DOCUMENT = "//td[@headers]//a[contains(text(),'Замовлення')]";
+    String DOCUMENT_S_GENERATED_SUCESSFULLY = "//div[@class='bd'][contains(text(),'3 document(s) generated successfully')]";
+    String OK_BUTTON_IN_THE_POPUP = "//button[@type='button'][contains(text(),'OK')]";
 }

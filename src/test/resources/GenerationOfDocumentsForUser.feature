@@ -41,4 +41,11 @@ Feature: verifying document generation
     When enter "6/5/2020" in the Дата укладення угоди field
     When enter "7/5/2020" in the Дата укладення замовлення field
     When enter "150" in the Вартість замовлення field
-#    When click on Generate button
+#    When choose Archive previous version(s) checkbox
+    When click on Generate button
+    Then № document(s) generated successfully message in the pop-up is appeared
+    When click OK button
+#    Then Archive previous document version(s) pop-up is appeared
+    Then Договір підряду document is generated
+    Then Додаток комерційна таємниця is generated
+    Then Замовлення is generated
