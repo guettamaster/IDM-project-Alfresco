@@ -69,4 +69,8 @@ public interface LOCATORS {
     String ЗАМОВЛЕННЯ_DOCUMENT = "//td[@headers]//a[contains(text(),'Замовлення')]";
     String DOCUMENT_S_GENERATED_SUCESSFULLY = "//div[@class='bd'][contains(text(),'3 document(s) generated successfully')]";
     String OK_BUTTON_IN_THE_POPUP = "//button[@type='button'][contains(text(),'OK')]";
+    String ARCHIVE_PREVIOUS_DOCUMENT_VERSION_S_TITLE = "//div[@class='hd'][contains(text(),'Archive previous document version(s)')]";
+
+
+
 }

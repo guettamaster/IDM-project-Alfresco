@@ -305,4 +305,24 @@ public class EndUserSteps extends ScenarioSteps {
     public void clickOKButton() {
         documentPage.clickOKButton();
     }
+
+    @Step
+    public void archivePreviousDocumentVersionSPopUpIsAppeared() {
+        Assert.assertTrue("False", documentPage.archivePreviousDocumentVersionSPopUpIsAppeared());
+    }
+
+    @Step
+    public void договірПідрядуDocumentIsDisplayed() {
+        Assert.assertTrue("False", documentPage.договірПідрядуDocumentIsDisplayed());
+    }
+
+    @Step
+    public void clickOnTheДоговірПідрядуDocument() {
+        documentPage.clickOnTheДоговірПідрядуDocument();
+    }
+
+    @Step
+    public void договірПідрядуDocumentIsOpenedInOnlyOffice() {
+        documentPage.договірПідрядуDocumentIsOpenedInOnlyOffice();
+    }
 }

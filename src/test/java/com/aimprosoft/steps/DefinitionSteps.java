@@ -307,4 +307,24 @@ public class DefinitionSteps {
     public void clickOKButton() {
         endUserSteps.clickOKButton();
     }
+
+    @Then("^Archive previous document version\\(s\\) pop-up is appeared$")
+    public void archivePreviousDocumentVersionSPopUpIsAppeared() {
+        endUserSteps.archivePreviousDocumentVersionSPopUpIsAppeared();
+    }
+
+    @Then("^Договір підряду document is displayed$")
+    public void договірПідрядуDocumentIsDisplayed() {
+        endUserSteps.договірПідрядуDocumentIsDisplayed();
+    }
+
+    @When("^click on the Договір підряду document$")
+    public void clickOnTheДоговірПідрядуDocument() {
+        endUserSteps.clickOnTheДоговірПідрядуDocument();
+    }
+
+    @Then("^Договір підряду document is opened in OnlyOffice$")
+    public void договірПідрядуDocumentIsOpenedInOnlyOffice() {
+        endUserSteps.договірПідрядуDocumentIsOpenedInOnlyOffice();
+    }
 }

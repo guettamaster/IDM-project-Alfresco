@@ -149,7 +149,6 @@ public class DocumentPage extends net.serenitybdd.core.pages.PageObject {
         $(LOCATORS.ВАРТІСТЬ_ЗАМОВЛЕННЯ.replace("$1", arg0)).sendKeys(arg0);
         actions.moveToElement(find(By.xpath(LOCATORS.ВАРТІСТЬ_ЗАМОВЛЕННЯ.replace("$1", arg0))));
         actions.build().perform();
-        waitABit(5000);
     }
 
     public void clickOnGenerateButton() {
@@ -158,7 +157,6 @@ public class DocumentPage extends net.serenitybdd.core.pages.PageObject {
 
     public void chooseArchivePreviousVersionSCheckbox() {
         evaluateJavascript("arguments[0].click();", $(LOCATORS.ARCHIVE_PREVIOUS_VERSION_S));
-        waitABit(5000);
     }
 
     public boolean договірПідрядуDocumentIsGenerated() {
@@ -183,5 +181,24 @@ public class DocumentPage extends net.serenitybdd.core.pages.PageObject {
 
     public void clickOKButton() {
         evaluateJavascript("arguments[0].click();", $(LOCATORS.OK_BUTTON_IN_THE_POPUP));
+    }
+
+    public boolean archivePreviousDocumentVersionSPopUpIsAppeared() {
+        withTimeoutOf(15, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(net.serenitybdd.core.annotations.findby.By.xpath(LOCATORS.ARCHIVE_PREVIOUS_DOCUMENT_VERSION_S_TITLE)));
+        return $(LOCATORS.ARCHIVE_PREVIOUS_DOCUMENT_VERSION_S_TITLE).isPresent();
+    }
+
+    public boolean договірПідрядуDocumentIsDisplayed() {
+        withTimeoutOf(25, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(net.serenitybdd.core.annotations.findby.By.xpath(LOCATORS.ДОГОВІР_ПІДРЯДУ_DOCUMENT)));
+        return $(LOCATORS.ДОГОВІР_ПІДРЯДУ_DOCUMENT).isPresent();
+    }
+
+    public void clickOnTheДоговірПідрядуDocument() {
+        evaluateJavascript("arguments[0].click();", $(LOCATORS.ДОГОВІР_ПІДРЯДУ_DOCUMENT));
+    }
+
+    public void договірПідрядуDocumentIsOpenedInOnlyOffice() {
+        getDriver().get("http://aim-dms.aimprosoft.com/share/page/document-details?nodeRef=workspace://SpacesStore/b8faec3d-94a4-48ac-9127-6404b10581e4");
+        waitABit(10000);
     }
 }
