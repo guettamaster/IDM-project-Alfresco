@@ -325,4 +325,33 @@ public class EndUserSteps extends ScenarioSteps {
     public void договірПідрядуDocumentIsOpenedInOnlyOffice() {
         documentPage.договірПідрядуDocumentIsOpenedInOnlyOffice();
     }
+
+    @Step
+    public void датаЗакінченняДоговоруIsDisplayedCorrectly(String arg0) {
+        Assert.assertTrue("False", documentPage.датаЗакінченняДоговоруIsDisplayedCorrectly(arg0));
+    }
+
+    @Step
+    public void contractDateIsDisplayedCorrectly(String arg0) {
+        Assert.assertTrue("False", documentPage.contractDateIsDisplayedCorrectly(arg0));
+    }
+
+    @Step
+    public void додатокКомерційнаТаємницяDocumentIsDisplayed() {
+        Assert.assertTrue("False", documentPage.додатокКомерційнаТаємницяDocumentIsDisplayed());    }
+
+    @Step
+    public void clickOnTheДодатокКомерційнаТаємницяDocument() {
+        documentPage.clickOnTheДодатокКомерційнаТаємницяDocument();
+    }
+
+    @Step
+    public void додатокКомерційнаТаємницяDocumentIsOpenedInOnlyOffice() {
+        documentPage.додатокКомерційнаТаємницяDocumentIsOpenedInOnlyOffice();
+    }
+
+    @Step
+    public void датаУкладенняУгодиIsDisplayedCorrectly(String arg0) {
+        Assert.assertTrue("False", documentPage.датаУкладенняУгодиIsDisplayedCorrectly(arg0));
+    }
 }

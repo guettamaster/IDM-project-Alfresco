@@ -327,4 +327,34 @@ public class DefinitionSteps {
     public void договірПідрядуDocumentIsOpenedInOnlyOffice() {
         endUserSteps.договірПідрядуDocumentIsOpenedInOnlyOffice();
     }
+
+    @Then("^\"([^\"]*)\" Дата закінчення договору is displayed correctly$")
+    public void датаЗакінченняДоговоруIsDisplayedCorrectly(String arg0) throws Throwable {
+        endUserSteps.датаЗакінченняДоговоруIsDisplayedCorrectly(arg0);
+    }
+
+    @Then("^\"([^\"]*)\" Contract Date is displayed correctly$")
+    public void contractDateIsDisplayedCorrectly(String arg0) throws Throwable {
+        endUserSteps.contractDateIsDisplayedCorrectly(arg0);
+    }
+
+    @Then("^Додаток комерційна таємниця document is displayed$")
+    public void додатокКомерційнаТаємницяDocumentIsDisplayed() {
+        endUserSteps.додатокКомерційнаТаємницяDocumentIsDisplayed();
+    }
+
+    @When("^click on the Додаток комерційна таємниця document$")
+    public void clickOnTheДодатокКомерційнаТаємницяDocument() {
+        endUserSteps.clickOnTheДодатокКомерційнаТаємницяDocument();
+    }
+
+    @When("^Додаток комерційна таємниця document is opened in OnlyOffice$")
+    public void додатокКомерційнаТаємницяDocumentIsOpenedInOnlyOffice() {
+        endUserSteps.додатокКомерційнаТаємницяDocumentIsOpenedInOnlyOffice();
+    }
+
+    @Then("^\"([^\"]*)\" Дата укладення угоди is displayed correctly$")
+    public void датаУкладенняУгодиIsDisplayedCorrectly(String arg0) throws Throwable {
+        endUserSteps.датаУкладенняУгодиIsDisplayedCorrectly(arg0);
+    }
 }

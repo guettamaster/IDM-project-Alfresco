@@ -70,7 +70,8 @@ public interface LOCATORS {
     String DOCUMENT_S_GENERATED_SUCESSFULLY = "//div[@class='bd'][contains(text(),'3 document(s) generated successfully')]";
     String OK_BUTTON_IN_THE_POPUP = "//button[@type='button'][contains(text(),'OK')]";
     String ARCHIVE_PREVIOUS_DOCUMENT_VERSION_S_TITLE = "//div[@class='hd'][contains(text(),'Archive previous document version(s)')]";
-
-
+    String CONTRACT_DATE_IN_ONLYOFFICE = "//span[@class='viewmode-value viewmode-value-date'][contains(text(),'$1')]";
+    String ДАТА_ЗАКІНЧЕННЯ_ДОГОВОРУ_IN_ONLYOFFICE = "//span[@class='viewmode-value'][contains(text(),'$1')]";
+    String ДАТА_УКЛАДАННЯ_УГОДИ_IN_ONLYOFFICE = "//span[@class='viewmode-value'][contains(text(),'$1')]";
 
 }

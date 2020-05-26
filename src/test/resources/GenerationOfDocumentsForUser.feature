@@ -61,4 +61,35 @@ Feature: verifying document generation
     Then Договір підряду document is displayed
     When click on the Договір підряду document
     When Договір підряду document is opened in OnlyOffice
-    Then
+    Then "Fri 1 May 2020" Contract Date is displayed correctly
+    Then "2020-05-03" Дата закінчення договору is displayed correctly
+
+  Scenario: 4.005 Check that Contract Date and Дата укладення угоди are displayed correctly in the Додаток комерційна таємниця document
+    When click on the "Oleg Ivankovckyi" user name
+    Then user menu is appeared
+    When click My Profile link
+    Then User Profile page is opened
+    When click the "Documents" link
+    Then "Document" page is opened
+    Then Додаток комерційна таємниця document is displayed
+    When click on the Додаток комерційна таємниця document
+    When Додаток комерційна таємниця document is opened in OnlyOffice
+    Then "Fri 1 May 2020" Contract Date is displayed correctly
+    Then "2020-05-06" Дата укладення угоди is displayed correctly
+
+  Scenario: 4.006 Check that Contract Date, Дата завершення робіт, Дата передачі результатів роботи, Дата початку виконання робіт, Дата укладення замовлення and Вартість замовлення are displayed correctly in the Замовлення document
+    When click on the "Oleg Ivankovckyi" user name
+    Then user menu is appeared
+    When click My Profile link
+    Then User Profile page is opened
+    When click the "Documents" link
+    Then "Document" page is opened
+    Then Замовлення document is displayed
+    When click on the Замовлення document
+    When Замовлення document is opened in OnlyOffice
+    Then "Fri 1 May 2020" Contract Date is displayed correctly
+    Then "2020-05-02" Дата завершення робіт is displayed correctly
+    Then "2020-05-04" Дата передачі результатів роботи is displayed correctly
+    Then "2020-05-05" Дата початку виконання робіт is displayed correctly
+    Then "2020-05-07" Дата укладення замовлення is displayed correctly
+    Then "150" Вартість замовлення is displayed correctly
