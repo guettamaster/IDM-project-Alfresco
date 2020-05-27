@@ -357,4 +357,19 @@ public class DefinitionSteps {
     public void датаУкладенняУгодиIsDisplayedCorrectly(String arg0) throws Throwable {
         endUserSteps.датаУкладенняУгодиIsDisplayedCorrectly(arg0);
     }
+
+    @Then("^Замовлення document is displayed$")
+    public void замовленняDocumentIsDisplayed() {
+        endUserSteps.замовленняDocumentIsDisplayed();
+    }
+
+    @When("^click on the Замовлення document$")
+    public void clickOnTheЗамовленняDocument() {
+        endUserSteps.clickOnTheЗамовленняDocument();
+    }
+
+    @When("^Замовлення document is opened in OnlyOffice$")
+    public void замовленняDocumentIsOpenedInOnlyOffice() {
+        endUserSteps.замовленняDocumentIsOpenedInOnlyOffice();
+    }
 }

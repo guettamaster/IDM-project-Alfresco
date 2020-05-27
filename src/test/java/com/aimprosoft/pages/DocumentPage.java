@@ -228,4 +228,17 @@ public class DocumentPage extends net.serenitybdd.core.pages.PageObject {
         withTimeoutOf(10, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(net.serenitybdd.core.annotations.findby.By.xpath(LOCATORS.ДАТА_УКЛАДАННЯ_УГОДИ_IN_ONLYOFFICE.replace("$1", arg0))));
         return $(LOCATORS.ДАТА_УКЛАДАННЯ_УГОДИ_IN_ONLYOFFICE.replace("$1", arg0)).isPresent();
     }
+
+    public boolean замовленняDocumentIsDisplayed() {
+        withTimeoutOf(25, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(net.serenitybdd.core.annotations.findby.By.xpath(LOCATORS.ЗАМОВЛЕННЯ_DOCUMENT)));
+        return $(LOCATORS.ЗАМОВЛЕННЯ_DOCUMENT).isPresent();
+    }
+
+    public void clickOnTheЗамовленняDocument() {
+        evaluateJavascript("arguments[0].click();", $(LOCATORS.ЗАМОВЛЕННЯ_DOCUMENT));
+    }
+
+    public void замовленняDocumentIsOpenedInOnlyOffice() {
+        getDriver().get("http://aim-dms.aimprosoft.com/share/page/document-details?nodeRef=workspace://SpacesStore/df454b31-19d8-4d95-afa8-c3c2ee6d173e");
+    }
 }

@@ -354,4 +354,19 @@ public class EndUserSteps extends ScenarioSteps {
     public void датаУкладенняУгодиIsDisplayedCorrectly(String arg0) {
         Assert.assertTrue("False", documentPage.датаУкладенняУгодиIsDisplayedCorrectly(arg0));
     }
+
+    @Step
+    public void замовленняDocumentIsDisplayed() {
+        Assert.assertTrue("False", documentPage.замовленняDocumentIsDisplayed());
+    }
+
+    @Step
+    public void clickOnTheЗамовленняDocument() {
+        documentPage.clickOnTheЗамовленняDocument();
+    }
+
+    @Step
+    public void замовленняDocumentIsOpenedInOnlyOffice() {
+        documentPage.замовленняDocumentIsOpenedInOnlyOffice();
+    }
 }
