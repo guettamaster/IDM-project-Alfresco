@@ -372,4 +372,29 @@ public class DefinitionSteps {
     public void замовленняDocumentIsOpenedInOnlyOffice() {
         endUserSteps.замовленняDocumentIsOpenedInOnlyOffice();
     }
+
+    @Then("^\"([^\"]*)\" Дата завершення робіт is displayed correctly$")
+    public void датаЗавершенняРобітIsDisplayedCorrectly(String arg0) throws Throwable {
+        endUserSteps.датаЗавершенняРобітIsDisplayedCorrectly(arg0);
+    }
+
+    @Then("^\"([^\"]*)\" Дата передачі результатів роботи is displayed correctly$")
+    public void датаПередачіРезультатівРоботиIsDisplayedCorrectly(String arg0) throws Throwable {
+        endUserSteps.датаПередачіРезультатівРоботиIsDisplayedCorrectly(arg0);
+    }
+
+    @Then("^\"([^\"]*)\" Дата початку виконання робіт is displayed correctly$")
+    public void датаПочаткуВиконанняРобітIsDisplayedCorrectly(String arg0) throws Throwable {
+        endUserSteps.датаПочаткуВиконанняРобітIsDisplayedCorrectly(arg0);
+    }
+
+    @Then("^\"([^\"]*)\" Дата укладення замовлення is displayed correctly$")
+    public void датаУкладенняЗамовленняIsDisplayedCorrectly(String arg0) throws Throwable {
+        endUserSteps.датаУкладенняЗамовленняIsDisplayedCorrectly(arg0);
+    }
+
+    @Then("^\"([^\"]*)\" Вартість замовлення is displayed correctly$")
+    public void вартістьЗамовленняIsDisplayedCorrectly(String arg0) throws Throwable {
+        endUserSteps.вартістьЗамовленняIsDisplayedCorrectly(arg0);
+    }
 }

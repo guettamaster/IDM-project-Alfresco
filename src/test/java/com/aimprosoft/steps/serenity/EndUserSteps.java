@@ -369,4 +369,29 @@ public class EndUserSteps extends ScenarioSteps {
     public void замовленняDocumentIsOpenedInOnlyOffice() {
         documentPage.замовленняDocumentIsOpenedInOnlyOffice();
     }
+
+    @Step
+    public void датаЗавершенняРобітIsDisplayedCorrectly(String arg0) {
+        Assert.assertTrue("False", documentPage.датаЗавершенняРобітIsDisplayedCorrectly(arg0));
+    }
+
+    @Step
+    public void датаПередачіРезультатівРоботиIsDisplayedCorrectly(String arg0) {
+        Assert.assertTrue("False", documentPage.датаПередачіРезультатівРоботиIsDisplayedCorrectly(arg0));
+    }
+
+    @Step
+    public void датаПочаткуВиконанняРобітIsDisplayedCorrectly(String arg0) {
+        Assert.assertTrue("False", documentPage.датаПочаткуВиконанняРобітIsDisplayedCorrectly(arg0));
+    }
+
+    @Step
+    public void датаУкладенняЗамовленняIsDisplayedCorrectly(String arg0) {
+        Assert.assertTrue("False", documentPage.датаУкладенняЗамовленняIsDisplayedCorrectly(arg0));
+    }
+
+    @Step
+    public void вартістьЗамовленняIsDisplayedCorrectly(String arg0) {
+        Assert.assertTrue("False", documentPage.вартістьЗамовленняIsDisplayedCorrectly(arg0));
+    }
 }

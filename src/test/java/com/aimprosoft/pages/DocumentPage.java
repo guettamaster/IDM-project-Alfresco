@@ -241,4 +241,29 @@ public class DocumentPage extends net.serenitybdd.core.pages.PageObject {
     public void замовленняDocumentIsOpenedInOnlyOffice() {
         getDriver().get("http://aim-dms.aimprosoft.com/share/page/document-details?nodeRef=workspace://SpacesStore/df454b31-19d8-4d95-afa8-c3c2ee6d173e");
     }
+
+    public boolean датаЗавершенняРобітIsDisplayedCorrectly(String arg0) {
+        withTimeoutOf(10, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(net.serenitybdd.core.annotations.findby.By.xpath(LOCATORS.ДАТА_ЗАВЕРШЕННЯ_РОБІТ_IN_ONLYOFFICE.replace("$1", arg0))));
+        return $(LOCATORS.ДАТА_ЗАВЕРШЕННЯ_РОБІТ_IN_ONLYOFFICE.replace("$1", arg0)).isPresent();
+    }
+
+    public boolean датаПередачіРезультатівРоботиIsDisplayedCorrectly(String arg0) {
+        withTimeoutOf(10, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(net.serenitybdd.core.annotations.findby.By.xpath(LOCATORS.ДАТА_ПЕРЕДАЧІ_РЕЗУЛЬТАТІВ_РОБОТИ_IN_ONLYOFFICE.replace("$1", arg0))));
+        return $(LOCATORS.ДАТА_ПЕРЕДАЧІ_РЕЗУЛЬТАТІВ_РОБОТИ_IN_ONLYOFFICE.replace("$1", arg0)).isPresent();
+    }
+
+    public boolean датаПочаткуВиконанняРобітIsDisplayedCorrectly(String arg0) {
+        withTimeoutOf(10, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(net.serenitybdd.core.annotations.findby.By.xpath(LOCATORS.ДАТА_ПОЧАТКУ_ВИКОНАННЯ_РОБІТ_IN_ONLYOFFICE.replace("$1", arg0))));
+        return $(LOCATORS.ДАТА_ПОЧАТКУ_ВИКОНАННЯ_РОБІТ_IN_ONLYOFFICE.replace("$1", arg0)).isPresent();
+    }
+
+    public boolean датаУкладенняЗамовленняIsDisplayedCorrectly(String arg0) {
+        withTimeoutOf(10, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(net.serenitybdd.core.annotations.findby.By.xpath(LOCATORS.ДАТА_УКЛАДАННЯ_ЗАМОВЛЕННЯ_IN_ONLYOFFICE.replace("$1", arg0))));
+        return $(LOCATORS.ДАТА_УКЛАДАННЯ_ЗАМОВЛЕННЯ_IN_ONLYOFFICE.replace("$1", arg0)).isPresent();
+    }
+
+    public boolean вартістьЗамовленняIsDisplayedCorrectly(String arg0) {
+        withTimeoutOf(10, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(net.serenitybdd.core.annotations.findby.By.xpath(LOCATORS.ВАРТІСТЬ_ЗАМОВЛЕННЯ_IN_ONLYOFFICE.replace("$1", arg0))));
+        return $(LOCATORS.ВАРТІСТЬ_ЗАМОВЛЕННЯ_IN_ONLYOFFICE.replace("$1", arg0)).isPresent();
+    }
 }

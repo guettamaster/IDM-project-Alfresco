@@ -71,7 +71,12 @@ public interface LOCATORS {
     String OK_BUTTON_IN_THE_POPUP = "//button[@type='button'][contains(text(),'OK')]";
     String ARCHIVE_PREVIOUS_DOCUMENT_VERSION_S_TITLE = "//div[@class='hd'][contains(text(),'Archive previous document version(s)')]";
     String CONTRACT_DATE_IN_ONLYOFFICE = "//span[@class='viewmode-value viewmode-value-date'][contains(text(),'$1')]";
-    String ДАТА_ЗАКІНЧЕННЯ_ДОГОВОРУ_IN_ONLYOFFICE = "//span[@class='viewmode-value'][contains(text(),'$1')]";
-    String ДАТА_УКЛАДАННЯ_УГОДИ_IN_ONLYOFFICE = "//span[@class='viewmode-value'][contains(text(),'$1')]";
+    String ДАТА_ЗАКІНЧЕННЯ_ДОГОВОРУ_IN_ONLYOFFICE = "//span[@class='viewmode-label'][contains(text(),'Дата закінчення договору:')]//ancestor::div[@class='document-fields-list']/span[@class='viewmode-value'][contains(text(),'$1')]";
+    String ДАТА_УКЛАДАННЯ_УГОДИ_IN_ONLYOFFICE = "//span[@class='viewmode-label'][contains(text(),'Дата укладення угоди:')]//ancestor::div[@class='document-fields-list']/span[@class='viewmode-value'][contains(text(),'$1')]";
+    String ДАТА_ЗАВЕРШЕННЯ_РОБІТ_IN_ONLYOFFICE = "//span[@class='viewmode-label'][contains(text(),'Дата завершення робіт:')]//ancestor::div[@class='document-fields-list']/span[@class='viewmode-value'][contains(text(),'$1')]";
+    String ДАТА_ПЕРЕДАЧІ_РЕЗУЛЬТАТІВ_РОБОТИ_IN_ONLYOFFICE = "//span[@class='viewmode-label'][contains(text(),'Дата передачі результатів роботи:')]//ancestor::div[@class='document-fields-list']/span[@class='viewmode-value'][contains(text(),'$1')]";
+    String ДАТА_ПОЧАТКУ_ВИКОНАННЯ_РОБІТ_IN_ONLYOFFICE = "//span[@class='viewmode-label'][contains(text(),'Дата початку виконання робіт:')]//ancestor::div[@class='document-fields-list']/span[@class='viewmode-value'][contains(text(),'$1')]";
+    String ДАТА_УКЛАДАННЯ_ЗАМОВЛЕННЯ_IN_ONLYOFFICE = "//span[@class='viewmode-label'][contains(text(),'Дата укладення замовлення:')]//ancestor::div[@class='document-fields-list']/span[@class='viewmode-value'][contains(text(),'$1')]";
+    String ВАРТІСТЬ_ЗАМОВЛЕННЯ_IN_ONLYOFFICE = "//span[@class='viewmode-label'][contains(text(),'Вартість замовлення:')]//ancestor::div[@class='document-fields-list']/span[@class='viewmode-value'][contains(text(),'$1')]";
 
 }
