@@ -7,4 +7,4 @@ Feature: verifying document regeneration
     Then home page is opened
     Then "Oleg Ivankovckyi" user name is displayed
 
-  Scenario: 5.002 Check that Додаток комерційна таємниця document are regenerated
+  Scenario: 5.002 Check that Додаток комерційна таємниця document is regenerated
