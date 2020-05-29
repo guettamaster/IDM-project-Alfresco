@@ -198,7 +198,7 @@ public class DocumentPage extends net.serenitybdd.core.pages.PageObject {
     }
 
     public void договірПідрядуDocumentIsOpenedInOnlyOffice() {
-        getDriver().get("http://aim-dms.aimprosoft.com/share/page/document-details?nodeRef=workspace://SpacesStore/b8faec3d-94a4-48ac-9127-6404b10581e4");
+        getDriver().get("http://aim-dms.aimprosoft.com/share/page/document-details?nodeRef=workspace://SpacesStore/f7cb08ea-bd43-4ed7-931b-5602f10c7121");
     }
 
     public boolean датаЗакінченняДоговоруIsDisplayedCorrectly(String arg0) {
@@ -207,7 +207,7 @@ public class DocumentPage extends net.serenitybdd.core.pages.PageObject {
     }
 
     public boolean contractDateIsDisplayedCorrectly(String arg0) {
-        withTimeoutOf(10, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(net.serenitybdd.core.annotations.findby.By.xpath(LOCATORS.CONTRACT_DATE_IN_ONLYOFFICE.replace("$1", arg0))));
+        withTimeoutOf(20, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(net.serenitybdd.core.annotations.findby.By.xpath(LOCATORS.CONTRACT_DATE_IN_ONLYOFFICE.replace("$1", arg0))));
         return $(LOCATORS.CONTRACT_DATE_IN_ONLYOFFICE.replace("$1", arg0)).isPresent();
     }
 
@@ -221,7 +221,7 @@ public class DocumentPage extends net.serenitybdd.core.pages.PageObject {
     }
 
     public void додатокКомерційнаТаємницяDocumentIsOpenedInOnlyOffice() {
-        getDriver().get("http://aim-dms.aimprosoft.com/share/page/document-details?nodeRef=workspace://SpacesStore/099b3b3e-8062-44de-8062-2c183ffba8c0");
+        getDriver().get("http://aim-dms.aimprosoft.com/share/page/document-details?nodeRef=workspace://SpacesStore/391be8ac-37b2-4b39-bfe9-dbe8bb094cfe");
     }
 
     public boolean датаУкладенняУгодиIsDisplayedCorrectly(String arg0) {
@@ -239,7 +239,7 @@ public class DocumentPage extends net.serenitybdd.core.pages.PageObject {
     }
 
     public void замовленняDocumentIsOpenedInOnlyOffice() {
-        getDriver().get("http://aim-dms.aimprosoft.com/share/page/document-details?nodeRef=workspace://SpacesStore/df454b31-19d8-4d95-afa8-c3c2ee6d173e");
+        getDriver().get("http://aim-dms.aimprosoft.com/share/page/document-details?nodeRef=workspace://SpacesStore/2bf93c20-d256-4378-8a5a-6d7119be3787");
     }
 
     public boolean датаЗавершенняРобітIsDisplayedCorrectly(String arg0) {
@@ -266,4 +266,5 @@ public class DocumentPage extends net.serenitybdd.core.pages.PageObject {
         withTimeoutOf(10, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(net.serenitybdd.core.annotations.findby.By.xpath(LOCATORS.ВАРТІСТЬ_ЗАМОВЛЕННЯ_IN_ONLYOFFICE.replace("$1", arg0))));
         return $(LOCATORS.ВАРТІСТЬ_ЗАМОВЛЕННЯ_IN_ONLYOFFICE.replace("$1", arg0)).isPresent();
     }
+
 }
