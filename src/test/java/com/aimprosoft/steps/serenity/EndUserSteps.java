@@ -394,4 +394,24 @@ public class EndUserSteps extends ScenarioSteps {
     public void вартістьЗамовленняIsDisplayedCorrectly(String arg0) {
         Assert.assertTrue("False", documentPage.вартістьЗамовленняIsDisplayedCorrectly(arg0));
     }
+
+    @Step
+    public void documentVersionForДоговірПідрядуDocumentIsPresented(String arg0) {
+        Assert.assertTrue("False", documentPage.documentVersionForДоговірПідрядуDocumentIsPresented(arg0));
+    }
+
+    @Step
+    public void documentVersionForДодатокКомерційнаТаємницяDocumentIsPresented(String arg0) {
+        Assert.assertTrue("False", documentPage.documentVersionForДодатокКомерційнаТаємницяDocumentIsPresented(arg0));
+    }
+
+    @Step
+    public void documentVersionForЗамовленняDocumentIsPresented(String arg0) {
+        Assert.assertTrue("False", documentPage.documentVersionForЗамовленняDocumentIsPresented(arg0));
+    }
+
+    @Step
+    public void clickRegenerateIconNearTheDocument(String arg0) {
+        documentPage.clickRegenerateIconNearTheDocument(arg0);
+    }
 }

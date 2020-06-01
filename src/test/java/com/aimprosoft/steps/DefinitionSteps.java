@@ -397,4 +397,24 @@ public class DefinitionSteps {
     public void вартістьЗамовленняIsDisplayedCorrectly(String arg0) throws Throwable {
         endUserSteps.вартістьЗамовленняIsDisplayedCorrectly(arg0);
     }
+
+    @Then("^\"([^\"]*)\" document version for Договір підряду document is presented$")
+    public void documentVersionForДоговірПідрядуDocumentIsPresented(String arg0) throws Throwable {
+        endUserSteps.documentVersionForДоговірПідрядуDocumentIsPresented(arg0);
+    }
+
+    @Then("^\"([^\"]*)\" document version for Додаток комерційна таємниця document is presented$")
+    public void documentVersionForДодатокКомерційнаТаємницяDocumentIsPresented(String arg0) throws Throwable {
+        endUserSteps.documentVersionForДодатокКомерційнаТаємницяDocumentIsPresented(arg0);
+    }
+
+    @Then("^\"([^\"]*)\" document version for Замовлення document is presented$")
+    public void documentVersionForЗамовленняDocumentIsPresented(String arg0) throws Throwable {
+        endUserSteps.documentVersionForЗамовленняDocumentIsPresented(arg0);
+    }
+
+    @When("^click Regenerate icon near the \"([^\"]*)\" document$")
+    public void clickRegenerateIconNearTheDocument(String arg0) throws Throwable {
+        endUserSteps.clickRegenerateIconNearTheDocument(arg0);
+    }
 }

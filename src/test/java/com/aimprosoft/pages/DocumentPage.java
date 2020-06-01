@@ -267,4 +267,23 @@ public class DocumentPage extends net.serenitybdd.core.pages.PageObject {
         return $(LOCATORS.ВАРТІСТЬ_ЗАМОВЛЕННЯ_IN_ONLYOFFICE.replace("$1", arg0)).isPresent();
     }
 
+    public boolean documentVersionForДоговірПідрядуDocumentIsPresented(String arg0) {
+        withTimeoutOf(10, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(net.serenitybdd.core.annotations.findby.By.xpath(LOCATORS.DOCUMENT_VERSION_FOR_ДОГОВІР_ПІДРЯДУ_DOCUMENT.replace("$1", arg0))));
+        return $(LOCATORS.DOCUMENT_VERSION_FOR_ДОГОВІР_ПІДРЯДУ_DOCUMENT.replace("$1", arg0)).isPresent();
+    }
+
+    public boolean documentVersionForДодатокКомерційнаТаємницяDocumentIsPresented(String arg0) {
+        withTimeoutOf(10, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(net.serenitybdd.core.annotations.findby.By.xpath(LOCATORS.DOCUMENT_VERSION_FOR_ДОДАТОК_КОМЕРЦІЙНА_ТАЄМНИЦЯ_DOCUMENT.replace("$1", arg0))));
+        return $(LOCATORS.DOCUMENT_VERSION_FOR_ДОДАТОК_КОМЕРЦІЙНА_ТАЄМНИЦЯ_DOCUMENT.replace("$1", arg0)).isPresent();
+    }
+
+    public boolean documentVersionForЗамовленняDocumentIsPresented(String arg0) {
+        withTimeoutOf(10, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(net.serenitybdd.core.annotations.findby.By.xpath(LOCATORS.DOCUMENT_VERSION_FOR_ЗАМОВЛЕННЯ_DOCUMENT.replace("$1", arg0))));
+        return $(LOCATORS.DOCUMENT_VERSION_FOR_ЗАМОВЛЕННЯ_DOCUMENT.replace("$1", arg0)).isPresent();
+    }
+
+    public void clickRegenerateIconNearTheDocument(String arg0) {
+        withTimeoutOf(20, TimeUnit.SECONDS).waitFor(ExpectedConditions.presenceOfElementLocated(org.openqa.selenium.By.xpath(LOCATORS.REGENERATE_ICON_NEAR_ДОГОВІР_ПІДРЯДУ_DOCUMENT.replace("$1", arg0))));
+        evaluateJavascript("arguments[0].click();", $(LOCATORS.REGENERATE_ICON_NEAR_ДОГОВІР_ПІДРЯДУ_DOCUMENT.replace("$1", arg0)));
+    }
 }

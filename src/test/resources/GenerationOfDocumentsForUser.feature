@@ -43,13 +43,16 @@ Feature: verifying document generation
     When enter "150" in the Вартість замовлення field
     When choose Archive previous version(s) checkbox
     When click on Generate button
-#    Then № document(s) generated successfully message in the pop-up is appeared
-#    When click OK button
-    Then Archive previous document version(s) pop-up is appeared
-    When click on the Yes button
+    Then № document(s) generated successfully message in the pop-up is appeared
+    When click OK button
+#    Then Archive previous document version(s) pop-up is appeared
+#    When click on the Yes button
     Then Договір підряду document is generated
+    Then "1.0" document version for Договір підряду document is presented
     Then Додаток комерційна таємниця is generated
+    Then "1.0" document version for Додаток комерційна таємниця document is presented
     Then Замовлення is generated
+    Then "1.0" document version for Замовлення document is presented
 
   Scenario: 4.004 Check that Contract Date and Дата закінчення договору are displayed correctly in the Договір підряду document
     When click on the "Oleg Ivankovckyi" user name
