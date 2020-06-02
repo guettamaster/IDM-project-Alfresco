@@ -48,10 +48,12 @@ Feature: verifying document generation
 #    Then Archive previous document version(s) pop-up is appeared
 #    When click on the Yes button
     Then Договір підряду document is generated
+    Then "2020-05-01" Contract Date for Договір підряду document is displayed correctly
     Then "1.0" document version for Договір підряду document is presented
     Then Додаток комерційна таємниця is generated
     Then "1.0" document version for Додаток комерційна таємниця document is presented
     Then Замовлення is generated
+    Then "2020-05-07" Дата укладення замовлення for Замовлення document is displayed correctly
     Then "1.0" document version for Замовлення document is presented
 
   Scenario: 4.004 Check that Contract Date and Дата закінчення договору are displayed correctly in the Договір підряду document

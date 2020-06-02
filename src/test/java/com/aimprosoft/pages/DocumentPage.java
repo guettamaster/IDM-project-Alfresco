@@ -286,4 +286,9 @@ public class DocumentPage extends net.serenitybdd.core.pages.PageObject {
         withTimeoutOf(20, TimeUnit.SECONDS).waitFor(ExpectedConditions.presenceOfElementLocated(org.openqa.selenium.By.xpath(LOCATORS.REGENERATE_ICON_NEAR_ДОГОВІР_ПІДРЯДУ_DOCUMENT.replace("$1", arg0))));
         evaluateJavascript("arguments[0].click();", $(LOCATORS.REGENERATE_ICON_NEAR_ДОГОВІР_ПІДРЯДУ_DOCUMENT.replace("$1", arg0)));
     }
+
+    public boolean regenerateDocumentPopUpIsAppeared() {
+        withTimeoutOf(30, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(net.serenitybdd.core.annotations.findby.By.xpath(LOCATORS.REGENERATE_DOCUMENT_TITLE_IN_THE_POPUP)));
+        return $(LOCATORS.REGENERATE_DOCUMENT_TITLE_IN_THE_POPUP).isPresent();
+    }
 }

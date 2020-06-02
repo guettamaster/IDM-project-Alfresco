@@ -417,4 +417,9 @@ public class DefinitionSteps {
     public void clickRegenerateIconNearTheDocument(String arg0) throws Throwable {
         endUserSteps.clickRegenerateIconNearTheDocument(arg0);
     }
+
+    @Then("^Regenerate Document pop-up is appeared$")
+    public void regenerateDocumentPopUpIsAppeared() {
+        endUserSteps.regenerateDocumentPopUpIsAppeared();
+    }
 }

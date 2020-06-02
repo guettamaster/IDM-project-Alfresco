@@ -414,4 +414,9 @@ public class EndUserSteps extends ScenarioSteps {
     public void clickRegenerateIconNearTheDocument(String arg0) {
         documentPage.clickRegenerateIconNearTheDocument(arg0);
     }
+
+    @Step
+    public void regenerateDocumentPopUpIsAppeared() {
+        Assert.assertTrue("False", documentPage.regenerateDocumentPopUpIsAppeared());
+    }
 }

@@ -64,7 +64,7 @@ public interface LOCATORS {
     String ВАРТІСТЬ_ЗАМОВЛЕННЯ = "//input[@id='template_x002e_section1_x002e_employee-documents_x0023_default_field.orderCost.number']";
     String ARCHIVE_PREVIOUS_VERSION_S = "//input[@id='template_x002e_section1_x002e_employee-documents_x0023_default_isArchivingEnabled-entry'][@class='checkbox-align ']";
     String GENERATE_BUTTON = "(//button[.='Generate'])[2]";
-    String ДОГОВІР_ПІДРЯДУ_DOCUMENT = "//td[@headers]//a[contains(text(),'Договір підряду')]";
+    String ДОГОВІР_ПІДРЯДУ_DOCUMENT = "//tr[@class='yui-dt-rec yui-dt-first yui-dt-even']//a[contains(text(),'Договір підряду №')][contains(text(),'від')][contains(text(),'ФОП')][contains(text(),'.docx')]";
     String DOCUMENT_VERSION_FOR_ДОГОВІР_ПІДРЯДУ_DOCUMENT = "//a[@target='_blank'][contains(text(),'Договір підряду')]//ancestor::h3[@class='name']/span[@class='document-version'][contains(text(),'$1')]";
     String ДОДАТОК_КОМЕРЦІЙНА_ТАЄМНИЦЯ_DOCUMENT = "//td[@headers]//a[contains(text(),'Додаток комерційна таємниця')]";
     String DOCUMENT_VERSION_FOR_ДОДАТОК_КОМЕРЦІЙНА_ТАЄМНИЦЯ_DOCUMENT = "//a[@target='_blank'][contains(text(),'Додаток комерційна таємниця')]//ancestor::h3[@class='name']/span[@class='document-version'][contains(text(),'$1')]";
@@ -84,5 +84,10 @@ public interface LOCATORS {
     String REGENERATE_ICON_NEAR_ДОГОВІР_ПІДРЯДУ_DOCUMENT = "//h3[@class='name']/a[@target='_blank'][contains(text(),'$1')]//ancestor::tr[@class='yui-dt-rec yui-dt-first yui-dt-even']//a[@title='Regenerate'][contains(text(),'Regenerate')]";
     String REGENERATE_ICON_NEAR_ДОДАТОК_КОМЕРЦІЙНА_ТАЄМНИЦЯ_DOCUMENT = "//h3[@class='name']/a[@target='_blank'][contains(text(),'$1')]//ancestor::tr[@class='yui-dt-rec yui-dt-odd']//a[@title='Regenerate'][contains(text(),'Regenerate')]";
     String REGENERATE_ICON_NEAR_ЗАМОВЛЕННЯ_DOCUMENT = "//h3[@class='name']/a[@target='_blank'][contains(text(),'$1')]//ancestor::tr[@class='yui-dt-rec yui-dt-last yui-dt-even']//a[@title='Regenerate'][contains(text(),'Regenerate')]";
-
+    String REGENERATE_DOCUMENT_TITLE_IN_THE_POPUP = "//div[@class='hd'][contains(text(),'Regenerate Document')]";
+    String CONTRACT_DATE_FIELD_IN_THE_REGENERATE_DOCUMENT_POPUP = "//input[@id='template_x002e_section2_x002e_employee-documents_x0023_default_field.contract.startDate-ctrl-date']";
+    String ДАТА_ЗАКІНЧЕННЯ_ДОГОВОРУ_FIELD_IN_THE_REGENERATE_DOCUMENT_POPUP = "//input[@id='template_x002e_section2_x002e_employee-documents_x0023_default_field.contract.endDate-ctrl-date']";
+    String GENERATE_BUTTON_IN_THE_REGENERATE_DOCUMENT_POPUP = "(//button[.='Generate'])[1]";
+    String CONTRACT_DATE_INSIDE_THE_ДОГОВІР_ПІДРЯДУ_MESSAGE_IN_THE_POPUP = "//div[@class='bd'][contains(text(),'$1')]";
+    String APPROPRIATE_MESSAGE_FOR_ДОГОВІР_ПІДРЯДУ_IN_THE_POPUP = "//div[@class='bd'][contains(text(),'Договір підряду №')][contains(text(),' від ')][contains(text(),' ФОП ')][contains(text(),'.docx updated successfully')]";
 }
