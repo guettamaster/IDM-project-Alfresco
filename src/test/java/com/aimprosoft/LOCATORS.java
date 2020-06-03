@@ -65,10 +65,12 @@ public interface LOCATORS {
     String ARCHIVE_PREVIOUS_VERSION_S = "//input[@id='template_x002e_section1_x002e_employee-documents_x0023_default_isArchivingEnabled-entry'][@class='checkbox-align ']";
     String GENERATE_BUTTON = "(//button[.='Generate'])[2]";
     String ДОГОВІР_ПІДРЯДУ_DOCUMENT = "//tr[@class='yui-dt-rec yui-dt-first yui-dt-even']//a[contains(text(),'Договір підряду №')][contains(text(),'від')][contains(text(),'ФОП')][contains(text(),'.docx')]";
+    String CONTRACT_DATE_FOR_ДОГОВІР_ПІДРЯДУ_DOCUMENT = "//tr[@class='yui-dt-rec yui-dt-first yui-dt-even']//a[contains(text(),'$1')]";
     String DOCUMENT_VERSION_FOR_ДОГОВІР_ПІДРЯДУ_DOCUMENT = "//a[@target='_blank'][contains(text(),'Договір підряду')]//ancestor::h3[@class='name']/span[@class='document-version'][contains(text(),'$1')]";
-    String ДОДАТОК_КОМЕРЦІЙНА_ТАЄМНИЦЯ_DOCUMENT = "//td[@headers]//a[contains(text(),'Додаток комерційна таємниця')]";
+    String ДОДАТОК_КОМЕРЦІЙНА_ТАЄМНИЦЯ_DOCUMENT = "//tr[@class='yui-dt-rec yui-dt-odd']//a[contains(text(),'Додаток комерційна таємниця ФОП ')][contains(text(),'.docx')]";
     String DOCUMENT_VERSION_FOR_ДОДАТОК_КОМЕРЦІЙНА_ТАЄМНИЦЯ_DOCUMENT = "//a[@target='_blank'][contains(text(),'Додаток комерційна таємниця')]//ancestor::h3[@class='name']/span[@class='document-version'][contains(text(),'$1')]";
-    String ЗАМОВЛЕННЯ_DOCUMENT = "//td[@headers]//a[contains(text(),'Замовлення')]";
+    String ЗАМОВЛЕННЯ_DOCUMENT = "//tr[@class='yui-dt-rec yui-dt-last yui-dt-even']//a[contains(text(),'Замовлення ФОП ')][contains(text(),' від ')][contains(text(),'.docx')]";
+    String ДАТА_УКЛАДАННЯ_ЗАМОВЛЕННЯ_FOR_ЗАМОВЛЕННЯ_DOCUMENT = "//tr[@class='yui-dt-rec yui-dt-last yui-dt-even']//a[contains(text(),'$1')]";
     String DOCUMENT_VERSION_FOR_ЗАМОВЛЕННЯ_DOCUMENT = "//a[@target='_blank'][contains(text(),'Замовлення')]//ancestor::h3[@class='name']/span[@class='document-version'][contains(text(),'$1')]";
     String DOCUMENT_S_GENERATED_SUCESSFULLY = "//div[@class='bd'][contains(text(),'3 document(s) generated successfully')]";
     String OK_BUTTON_IN_THE_POPUP = "//button[@type='button'][contains(text(),'OK')]";

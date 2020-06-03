@@ -419,4 +419,44 @@ public class EndUserSteps extends ScenarioSteps {
     public void regenerateDocumentPopUpIsAppeared() {
         Assert.assertTrue("False", documentPage.regenerateDocumentPopUpIsAppeared());
     }
+
+    @Step
+    public void contractDateForДоговірПідрядуDocumentIsDisplayedCorrectly(String arg0) {
+        Assert.assertTrue("False", documentPage.contractDateForДоговірПідрядуDocumentIsDisplayedCorrectly(arg0));
+    }
+
+    @Step
+    public void датаУкладенняЗамовленняForЗамовленняDocumentIsDisplayedCorrectly(String arg0) {
+        Assert.assertTrue("False", documentPage.датаУкладенняЗамовленняForЗамовленняDocumentIsDisplayedCorrectly(arg0));
+    }
+
+    @Step
+    public void enterInTheContractDateFieldInTheRegenerateDocumentPopUp(String arg0) {
+        documentPage.enterInTheContractDateFieldInTheRegenerateDocumentPopUp(arg0);
+    }
+
+    @Step
+    public void enterInTheДатаЗакінченняДоговоруFieldInTheRegenerateDocumentPopUp(String arg0) {
+        documentPage.enterInTheДатаЗакінченняДоговоруFieldInTheRegenerateDocumentPopUp(arg0);
+    }
+
+    @Step
+    public void clickOnGenerateButtonInTheRegenerateDocumentPopUp() {
+        documentPage.clickOnGenerateButtonInTheRegenerateDocumentPopUp();
+    }
+
+    @Step
+    public void contractDateInTheMessageIsDisplayedInThePopUp(String arg0) {
+        Assert.assertTrue("False", documentPage.contractDateInTheMessageIsDisplayedInThePopUp(arg0));
+    }
+
+    @Step
+    public void appropriateMessageForДоговірПідрядуIsDisplayed() {
+        Assert.assertTrue("False", documentPage.appropriateMessageForДоговірПідрядуIsDisplayed());
+    }
+
+    @Step
+    public void договірПідрядуDocumentIsRegenerated() {
+        Assert.assertTrue("False", documentPage.договірПідрядуDocumentIsRegenerated());
+    }
 }

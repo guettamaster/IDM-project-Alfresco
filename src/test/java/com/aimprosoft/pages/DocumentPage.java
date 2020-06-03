@@ -198,7 +198,7 @@ public class DocumentPage extends net.serenitybdd.core.pages.PageObject {
     }
 
     public void договірПідрядуDocumentIsOpenedInOnlyOffice() {
-        getDriver().get("http://aim-dms.aimprosoft.com/share/page/document-details?nodeRef=workspace://SpacesStore/f7cb08ea-bd43-4ed7-931b-5602f10c7121");
+        getDriver().get("http://aim-dms.aimprosoft.com/share/page/document-details?nodeRef=workspace://SpacesStore/399fdb6c-5942-4d3b-a9d6-7cb909f92f30");
     }
 
     public boolean датаЗакінченняДоговоруIsDisplayedCorrectly(String arg0) {
@@ -221,7 +221,7 @@ public class DocumentPage extends net.serenitybdd.core.pages.PageObject {
     }
 
     public void додатокКомерційнаТаємницяDocumentIsOpenedInOnlyOffice() {
-        getDriver().get("http://aim-dms.aimprosoft.com/share/page/document-details?nodeRef=workspace://SpacesStore/391be8ac-37b2-4b39-bfe9-dbe8bb094cfe");
+        getDriver().get("http://aim-dms.aimprosoft.com/share/page/document-details?nodeRef=workspace://SpacesStore/09619bd4-d347-4134-a2e0-e64101f3c671");
     }
 
     public boolean датаУкладенняУгодиIsDisplayedCorrectly(String arg0) {
@@ -239,7 +239,7 @@ public class DocumentPage extends net.serenitybdd.core.pages.PageObject {
     }
 
     public void замовленняDocumentIsOpenedInOnlyOffice() {
-        getDriver().get("http://aim-dms.aimprosoft.com/share/page/document-details?nodeRef=workspace://SpacesStore/2bf93c20-d256-4378-8a5a-6d7119be3787");
+        getDriver().get("http://aim-dms.aimprosoft.com/share/page/document-details?nodeRef=workspace://SpacesStore/f06f9e2a-ec43-4b24-a8f7-5205e8b7da31");
     }
 
     public boolean датаЗавершенняРобітIsDisplayedCorrectly(String arg0) {
@@ -290,5 +290,48 @@ public class DocumentPage extends net.serenitybdd.core.pages.PageObject {
     public boolean regenerateDocumentPopUpIsAppeared() {
         withTimeoutOf(30, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(net.serenitybdd.core.annotations.findby.By.xpath(LOCATORS.REGENERATE_DOCUMENT_TITLE_IN_THE_POPUP)));
         return $(LOCATORS.REGENERATE_DOCUMENT_TITLE_IN_THE_POPUP).isPresent();
+    }
+
+    public boolean contractDateForДоговірПідрядуDocumentIsDisplayedCorrectly(String arg0) {
+        withTimeoutOf(10, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(net.serenitybdd.core.annotations.findby.By.xpath(LOCATORS.CONTRACT_DATE_FOR_ДОГОВІР_ПІДРЯДУ_DOCUMENT.replace("$1", arg0))));
+        return $(LOCATORS.CONTRACT_DATE_FOR_ДОГОВІР_ПІДРЯДУ_DOCUMENT.replace("$1", arg0)).isPresent();
+    }
+
+    public boolean датаУкладенняЗамовленняForЗамовленняDocumentIsDisplayedCorrectly(String arg0) {
+        withTimeoutOf(10, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(net.serenitybdd.core.annotations.findby.By.xpath(LOCATORS.ДАТА_УКЛАДАННЯ_ЗАМОВЛЕННЯ_FOR_ЗАМОВЛЕННЯ_DOCUMENT.replace("$1", arg0))));
+        return $(LOCATORS.ДАТА_УКЛАДАННЯ_ЗАМОВЛЕННЯ_FOR_ЗАМОВЛЕННЯ_DOCUMENT.replace("$1", arg0)).isPresent();
+    }
+
+    public void enterInTheContractDateFieldInTheRegenerateDocumentPopUp(String arg0) {
+        Actions actions = new Actions(getDriver());
+        $(LOCATORS.CONTRACT_DATE_FIELD_IN_THE_REGENERATE_DOCUMENT_POPUP.replace("$1", arg0)).sendKeys(arg0);
+        actions.moveToElement(find(By.xpath(LOCATORS.CONTRACT_DATE_FIELD_IN_THE_REGENERATE_DOCUMENT_POPUP.replace("$1", arg0))));
+        actions.build().perform();
+    }
+
+    public void enterInTheДатаЗакінченняДоговоруFieldInTheRegenerateDocumentPopUp(String arg0) {
+        Actions actions = new Actions(getDriver());
+        $(LOCATORS.ДАТА_ЗАКІНЧЕННЯ_ДОГОВОРУ_FIELD_IN_THE_REGENERATE_DOCUMENT_POPUP.replace("$1", arg0)).sendKeys(arg0);
+        actions.moveToElement(find(By.xpath(LOCATORS.ДАТА_ЗАКІНЧЕННЯ_ДОГОВОРУ_FIELD_IN_THE_REGENERATE_DOCUMENT_POPUP.replace("$1", arg0))));
+        actions.build().perform();
+    }
+
+    public void clickOnGenerateButtonInTheRegenerateDocumentPopUp() {
+        evaluateJavascript("arguments[0].click();", $(LOCATORS.GENERATE_BUTTON_IN_THE_REGENERATE_DOCUMENT_POPUP));
+    }
+
+    public boolean contractDateInTheMessageIsDisplayedInThePopUp(String arg0) {
+        withTimeoutOf(30, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(net.serenitybdd.core.annotations.findby.By.xpath(LOCATORS.CONTRACT_DATE_INSIDE_THE_ДОГОВІР_ПІДРЯДУ_MESSAGE_IN_THE_POPUP.replace("$1", arg0))));
+        return $(LOCATORS.CONTRACT_DATE_INSIDE_THE_ДОГОВІР_ПІДРЯДУ_MESSAGE_IN_THE_POPUP.replace("$1", arg0)).isPresent();
+    }
+
+    public boolean appropriateMessageForДоговірПідрядуIsDisplayed() {
+        withTimeoutOf(30, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(net.serenitybdd.core.annotations.findby.By.xpath(LOCATORS.APPROPRIATE_MESSAGE_FOR_ДОГОВІР_ПІДРЯДУ_IN_THE_POPUP)));
+        return $(LOCATORS.APPROPRIATE_MESSAGE_FOR_ДОГОВІР_ПІДРЯДУ_IN_THE_POPUP).isPresent();
+    }
+
+    public boolean договірПідрядуDocumentIsRegenerated() {
+        withTimeoutOf(25, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(net.serenitybdd.core.annotations.findby.By.xpath(LOCATORS.ДОГОВІР_ПІДРЯДУ_DOCUMENT)));
+        return $(LOCATORS.ДОГОВІР_ПІДРЯДУ_DOCUMENT).isPresent();
     }
 }

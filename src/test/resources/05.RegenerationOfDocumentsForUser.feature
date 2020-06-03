@@ -30,6 +30,13 @@ Feature: verifying document regeneration
     Then "2020-06-06" Contract Date in the message is displayed in the pop-up
     Then appropriate message for Договір підряду is displayed
     When click OK button
+    Then Договір підряду document is regenerated
+    Then "2020-06-06" Contract Date for Договір підряду document is displayed correctly
+    Then "1.1" document version for Договір підряду document is presented
+    When click on the Договір підряду document
+    When Договір підряду document is opened in OnlyOffice
+    Then "Sat 6 Jun 2020" Contract Date is displayed correctly
+    Then "2020-07-07" Дата закінчення договору is displayed correctly
 
   Scenario: 5.003 Check that Додаток комерційна таємниця document is regenerated
     When click on the "Oleg Ivankovckyi" user name

@@ -422,4 +422,44 @@ public class DefinitionSteps {
     public void regenerateDocumentPopUpIsAppeared() {
         endUserSteps.regenerateDocumentPopUpIsAppeared();
     }
+
+    @Then("^\"([^\"]*)\" Contract Date for Договір підряду document is displayed correctly$")
+    public void contractDateForДоговірПідрядуDocumentIsDisplayedCorrectly(String arg0) throws Throwable {
+        endUserSteps.contractDateForДоговірПідрядуDocumentIsDisplayedCorrectly(arg0);
+    }
+
+    @Then("^\"([^\"]*)\" Дата укладення замовлення for Замовлення document is displayed correctly$")
+    public void датаУкладенняЗамовленняForЗамовленняDocumentIsDisplayedCorrectly(String arg0) throws Throwable {
+        endUserSteps.датаУкладенняЗамовленняForЗамовленняDocumentIsDisplayedCorrectly(arg0);
+    }
+
+    @When("^enter \"([^\"]*)\" in the Contract Date field in the Regenerate Document pop-up$")
+    public void enterInTheContractDateFieldInTheRegenerateDocumentPopUp(String arg0) throws Throwable {
+        endUserSteps.enterInTheContractDateFieldInTheRegenerateDocumentPopUp(arg0);
+    }
+
+    @When("^enter \"([^\"]*)\" in the Дата закінчення договору field in the Regenerate Document pop-up$")
+    public void enterInTheДатаЗакінченняДоговоруFieldInTheRegenerateDocumentPopUp(String arg0) throws Throwable {
+        endUserSteps.enterInTheДатаЗакінченняДоговоруFieldInTheRegenerateDocumentPopUp(arg0);
+    }
+
+    @When("^click on Generate button in the Regenerate Document pop-up$")
+    public void clickOnGenerateButtonInTheRegenerateDocumentPopUp() {
+        endUserSteps.clickOnGenerateButtonInTheRegenerateDocumentPopUp();
+    }
+
+    @Then("^\"([^\"]*)\" Contract Date in the message is displayed in the pop-up$")
+    public void contractDateInTheMessageIsDisplayedInThePopUp(String arg0) throws Throwable {
+        endUserSteps.contractDateInTheMessageIsDisplayedInThePopUp(arg0);
+    }
+
+    @Then("^appropriate message for Договір підряду is displayed$")
+    public void appropriateMessageForДоговірПідрядуIsDisplayed() {
+        endUserSteps.appropriateMessageForДоговірПідрядуIsDisplayed();
+    }
+
+    @Then("^Договір підряду document is regenerated$")
+    public void договірПідрядуDocumentIsRegenerated() {
+        endUserSteps.договірПідрядуDocumentIsRegenerated();
+    }
 }
