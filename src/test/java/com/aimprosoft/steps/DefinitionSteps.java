@@ -462,4 +462,9 @@ public class DefinitionSteps {
     public void договірПідрядуDocumentIsRegenerated() {
         endUserSteps.договірПідрядуDocumentIsRegenerated();
     }
+
+    @When("^click second Regenerate icon near the \"([^\"]*)\" document$")
+    public void clickSecondRegenerateIconNearTheDocument(String arg0) throws Throwable {
+        endUserSteps.clickSecondRegenerateIconNearTheDocument(arg0);
+    }
 }

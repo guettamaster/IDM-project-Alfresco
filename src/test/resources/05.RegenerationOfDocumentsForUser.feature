@@ -53,7 +53,12 @@ Feature: verifying document regeneration
     Then "1.0" document version for Додаток комерційна таємниця document is presented
     Then Замовлення document is displayed
     Then "1.0" document version for Замовлення document is presented
-    When click 2-d Regenerate icon near the "Додаток комерційна таємниця" document
+    When click second Regenerate icon near the "Додаток комерційна таємниця" document
+    Then Regenerate Document pop-up is appeared
+    Then checkbox is preselected on the Update current document
+    When enter "2/2/2020" in the Contract Date field in the Regenerate Document pop-up
+    When enter "3/3/2020" in the Дата укладення угоди field in the Regenerate Document pop-up
+    When click on Generate button in the Regenerate Document pop-up
 
   Scenario: 5.004 Check that Замовлення document is regenerated
     When click on the "Oleg Ivankovckyi" user name
@@ -70,4 +75,4 @@ Feature: verifying document regeneration
     Then "1.0" document version for Додаток комерційна таємниця document is presented
     Then Замовлення document is displayed
     Then "1.0" document version for Замовлення document is presented
-    When click 3-d Regenerate icon near the "Замовлення" document
+    When click third Regenerate icon near the "Замовлення" document

@@ -459,4 +459,9 @@ public class EndUserSteps extends ScenarioSteps {
     public void договірПідрядуDocumentIsRegenerated() {
         Assert.assertTrue("False", documentPage.договірПідрядуDocumentIsRegenerated());
     }
+
+    @Step
+    public void clickSecondRegenerateIconNearTheDocument(String arg0) {
+        documentPage.clickSecondRegenerateIconNearTheDocument(arg0);
+    }
 }

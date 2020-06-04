@@ -334,4 +334,9 @@ public class DocumentPage extends net.serenitybdd.core.pages.PageObject {
         withTimeoutOf(25, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(net.serenitybdd.core.annotations.findby.By.xpath(LOCATORS.ДОГОВІР_ПІДРЯДУ_DOCUMENT)));
         return $(LOCATORS.ДОГОВІР_ПІДРЯДУ_DOCUMENT).isPresent();
     }
+
+    public void clickSecondRegenerateIconNearTheDocument(String arg0) {
+        withTimeoutOf(20, TimeUnit.SECONDS).waitFor(ExpectedConditions.presenceOfElementLocated(org.openqa.selenium.By.xpath(LOCATORS.REGENERATE_ICON_NEAR_ДОДАТОК_КОМЕРЦІЙНА_ТАЄМНИЦЯ_DOCUMENT.replace("$1", arg0))));
+        evaluateJavascript("arguments[0].click();", $(LOCATORS.REGENERATE_ICON_NEAR_ДОДАТОК_КОМЕРЦІЙНА_ТАЄМНИЦЯ_DOCUMENT.replace("$1", arg0)));
+    }
 }
