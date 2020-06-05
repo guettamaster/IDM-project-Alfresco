@@ -65,7 +65,9 @@ Feature: verifying document generation
     Then "Document" page is opened
     Then Договір підряду document is displayed
     When click on the Договір підряду document
-    When Договір підряду document is opened in OnlyOffice
+    When switch to second tab
+#    When switch to first tab
+#    When Договір підряду document is opened in OnlyOffice
     Then "Fri 1 May 2020" Contract Date is displayed correctly
     Then "2020-05-03" Дата закінчення договору is displayed correctly
 
@@ -78,7 +80,9 @@ Feature: verifying document generation
     Then "Document" page is opened
     Then Додаток комерційна таємниця document is displayed
     When click on the Додаток комерційна таємниця document
+
     When Додаток комерційна таємниця document is opened in OnlyOffice
+
     Then "Fri 1 May 2020" Contract Date is displayed correctly
     Then "2020-05-06" Дата укладення угоди is displayed correctly
 

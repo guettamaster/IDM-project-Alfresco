@@ -10,6 +10,8 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 
 @DefaultUrl("http://aim-dms.aimprosoft.com/share/page/")
@@ -307,6 +309,7 @@ public class DocumentPage extends net.serenitybdd.core.pages.PageObject {
         $(LOCATORS.CONTRACT_DATE_FIELD_IN_THE_REGENERATE_DOCUMENT_POPUP.replace("$1", arg0)).sendKeys(arg0);
         actions.moveToElement(find(By.xpath(LOCATORS.CONTRACT_DATE_FIELD_IN_THE_REGENERATE_DOCUMENT_POPUP.replace("$1", arg0))));
         actions.build().perform();
+        waitABit(15000);
     }
 
     public void enterInTheДатаЗакінченняДоговоруFieldInTheRegenerateDocumentPopUp(String arg0) {
@@ -339,4 +342,41 @@ public class DocumentPage extends net.serenitybdd.core.pages.PageObject {
         withTimeoutOf(20, TimeUnit.SECONDS).waitFor(ExpectedConditions.presenceOfElementLocated(org.openqa.selenium.By.xpath(LOCATORS.REGENERATE_ICON_NEAR_ДОДАТОК_КОМЕРЦІЙНА_ТАЄМНИЦЯ_DOCUMENT.replace("$1", arg0))));
         evaluateJavascript("arguments[0].click();", $(LOCATORS.REGENERATE_ICON_NEAR_ДОДАТОК_КОМЕРЦІЙНА_ТАЄМНИЦЯ_DOCUMENT.replace("$1", arg0)));
     }
+
+    public boolean checkboxIsPreselectedOnTheUpdateCurrentDocument() {
+        withTimeoutOf(25, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(net.serenitybdd.core.annotations.findby.By.xpath(LOCATORS.UPDATE_CURRENT_DOCUMENT_PRESELECTED_CHECKBOX)));
+        return $(LOCATORS.UPDATE_CURRENT_DOCUMENT_PRESELECTED_CHECKBOX).isPresent();
+    }
+
+    public void switchToSecondTab() {
+        ArrayList<String> tabs = new ArrayList<String>(getDriver().getWindowHandles());
+        getDriver().switchTo().window(tabs.get(1));
+    }
+
+    public void switchToFirstTab() {
+        ArrayList<String> tabs = new ArrayList<String>(getDriver().getWindowHandles());
+        getDriver().switchTo().window(tabs.get(0));
+    }
+
+    public boolean elementIsVisible(String xpath) {
+        try {
+            waitFor(ExpectedConditions.visibilityOfAllElementsLocatedBy
+                    (By.xpath(xpath)));
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public boolean elementIsVisible(int waitSec, String xpath) {
+        try {
+            withTimeoutOf(waitSec, TimeUnit.SECONDS)
+                    .waitFor(ExpectedConditions.visibilityOfAllElementsLocatedBy
+                            (By.xpath(xpath)));
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
 }

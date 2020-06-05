@@ -1,5 +1,6 @@
 package com.aimprosoft.steps.serenity;
 
+import com.aimprosoft.LOCATORS;
 import com.aimprosoft.pages.DocumentPage;
 import com.aimprosoft.pages.GroupPage;
 import com.aimprosoft.pages.SignInPage;
@@ -318,6 +319,9 @@ public class EndUserSteps extends ScenarioSteps {
 
     @Step
     public void clickOnTheДоговірПідрядуDocument() {
+
+        documentPage.elementIsVisible(LOCATORS.ДОГОВІР_ПІДРЯДУ_DOCUMENT);
+//        Assert.assertTrue(documentPage.elementIsVisible(1,LOCATORS.ДОГОВІР_ПІДРЯДУ_DOCUMENT));
         documentPage.clickOnTheДоговірПідрядуDocument();
     }
 
@@ -463,5 +467,19 @@ public class EndUserSteps extends ScenarioSteps {
     @Step
     public void clickSecondRegenerateIconNearTheDocument(String arg0) {
         documentPage.clickSecondRegenerateIconNearTheDocument(arg0);
+    }
+
+    public void checkboxIsPreselectedOnTheUpdateCurrentDocument() {
+        Assert.assertTrue("False", documentPage.checkboxIsPreselectedOnTheUpdateCurrentDocument());
+    }
+
+    @Step
+    public void switchToSecondTab() {
+        documentPage.switchToSecondTab();
+    }
+
+    @Step
+    public void switchToFirstTab() {
+        documentPage.switchToFirstTab();
     }
 }

@@ -467,4 +467,19 @@ public class DefinitionSteps {
     public void clickSecondRegenerateIconNearTheDocument(String arg0) throws Throwable {
         endUserSteps.clickSecondRegenerateIconNearTheDocument(arg0);
     }
+
+    @Then("^checkbox is preselected on the Update current document$")
+    public void checkboxIsPreselectedOnTheUpdateCurrentDocument() {
+        endUserSteps.checkboxIsPreselectedOnTheUpdateCurrentDocument();
+    }
+
+    @When("^switch to second tab$")
+    public void switchToSecondTab() {
+        endUserSteps.switchToSecondTab();
+    }
+
+    @When("^switch to first tab$")
+    public void switchToFirstTab() {
+        endUserSteps.switchToFirstTab();
+    }
 }

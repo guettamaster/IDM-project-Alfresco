@@ -92,4 +92,6 @@ public interface LOCATORS {
     String GENERATE_BUTTON_IN_THE_REGENERATE_DOCUMENT_POPUP = "(//button[.='Generate'])[1]";
     String CONTRACT_DATE_INSIDE_THE_ДОГОВІР_ПІДРЯДУ_MESSAGE_IN_THE_POPUP = "//div[@class='bd'][contains(text(),'$1')]";
     String APPROPRIATE_MESSAGE_FOR_ДОГОВІР_ПІДРЯДУ_IN_THE_POPUP = "//div[@class='bd'][contains(text(),'Договір підряду №')][contains(text(),' від ')][contains(text(),' ФОП ')][contains(text(),'.docx updated successfully')]";
+    String UPDATE_CURRENT_DOCUMENT_PRESELECTED_CHECKBOX = "//input[@name='-']//ancestor::span[@class='span-align regenerate-radio-span']/input[@id='template_x002e_section2_x002e_employee-documents_x0023_default_isUpdate-input'][@value='true']";
+
 }

@@ -57,8 +57,8 @@ Feature: verifying document regeneration
     Then Regenerate Document pop-up is appeared
     Then checkbox is preselected on the Update current document
     When enter "2/2/2020" in the Contract Date field in the Regenerate Document pop-up
-    When enter "3/3/2020" in the Дата укладення угоди field in the Regenerate Document pop-up
-    When click on Generate button in the Regenerate Document pop-up
+#    When enter "3/3/2020" in the Дата укладення угоди field in the Regenerate Document pop-up
+#    When click on Generate button in the Regenerate Document pop-up
 
   Scenario: 5.004 Check that Замовлення document is regenerated
     When click on the "Oleg Ivankovckyi" user name
