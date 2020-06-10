@@ -482,4 +482,19 @@ public class DefinitionSteps {
     public void switchToFirstTab() {
         endUserSteps.switchToFirstTab();
     }
+
+    @When("^enter \"([^\"]*)\" in the Дата укладення угоди field in the Regenerate Document pop-up$")
+    public void enterInTheДатаУкладенняУгодиFieldInTheRegenerateDocumentPopUp(String arg0) throws Throwable {
+        endUserSteps.enterInTheДатаУкладенняУгодиFieldInTheRegenerateDocumentPopUp(arg0);
+    }
+
+    @Then("^appropriate message for Додаток комерційна таємниця is displayed$")
+    public void appropriateMessageForДодатокКомерційнаТаємницяIsDisplayed() {
+        endUserSteps.appropriateMessageForДодатокКомерційнаТаємницяIsDisplayed();
+    }
+
+    @Then("^Додаток комерційна таємниця is regenerated$")
+    public void додатокКомерційнаТаємницяIsRegenerated() {
+        endUserSteps.додатокКомерційнаТаємницяIsRegenerated();
+    }
 }

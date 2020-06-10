@@ -346,6 +346,7 @@ public class DocumentPage extends net.serenitybdd.core.pages.PageObject {
     public boolean checkboxIsPreselectedOnTheUpdateCurrentDocument() {
         withTimeoutOf(25, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(net.serenitybdd.core.annotations.findby.By.xpath(LOCATORS.UPDATE_CURRENT_DOCUMENT_PRESELECTED_CHECKBOX)));
         return $(LOCATORS.UPDATE_CURRENT_DOCUMENT_PRESELECTED_CHECKBOX).isPresent();
+
     }
 
     public void switchToSecondTab() {
@@ -379,4 +380,20 @@ public class DocumentPage extends net.serenitybdd.core.pages.PageObject {
         }
     }
 
+    public void enterInTheДатаУкладенняУгодиFieldInTheRegenerateDocumentPopUp(String arg0) {
+        Actions actions = new Actions(getDriver());
+        $(LOCATORS.ДАТА_УКЛАДАННЯ_УГОДИ_FIELD_IN_THE_REGENERATE_DOCUMENT_POPUP.replace("$1", arg0)).sendKeys(arg0);
+        actions.moveToElement(find(By.xpath(LOCATORS.ДАТА_УКЛАДАННЯ_УГОДИ_FIELD_IN_THE_REGENERATE_DOCUMENT_POPUP.replace("$1", arg0))));
+        actions.build().perform();
+    }
+
+    public boolean appropriateMessageForДодатокКомерційнаТаємницяIsDisplayed() {
+        withTimeoutOf(30, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(net.serenitybdd.core.annotations.findby.By.xpath(LOCATORS.APPROPRIATE_MESSAGE_FOR_ДОДАТОК_КОМЕРЦІЙНА_ТАЄМНИЦЯ_IN_THE_POPUP)));
+        return $(LOCATORS.APPROPRIATE_MESSAGE_FOR_ДОДАТОК_КОМЕРЦІЙНА_ТАЄМНИЦЯ_IN_THE_POPUP).isPresent();
+    }
+
+    public boolean додатокКомерційнаТаємницяIsRegenerated() {
+        withTimeoutOf(25, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(net.serenitybdd.core.annotations.findby.By.xpath(LOCATORS.ДОДАТОК_КОМЕРЦІЙНА_ТАЄМНИЦЯ_DOCUMENT)));
+        return $(LOCATORS.ДОДАТОК_КОМЕРЦІЙНА_ТАЄМНИЦЯ_DOCUMENT).isPresent();
+    }
 }

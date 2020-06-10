@@ -67,7 +67,7 @@ public interface LOCATORS {
     String ДОГОВІР_ПІДРЯДУ_DOCUMENT = "//tr[@class='yui-dt-rec yui-dt-first yui-dt-even']//a[contains(text(),'Договір підряду №')][contains(text(),'від')][contains(text(),'ФОП')][contains(text(),'.docx')]";
     String CONTRACT_DATE_FOR_ДОГОВІР_ПІДРЯДУ_DOCUMENT = "//tr[@class='yui-dt-rec yui-dt-first yui-dt-even']//a[contains(text(),'$1')]";
     String DOCUMENT_VERSION_FOR_ДОГОВІР_ПІДРЯДУ_DOCUMENT = "//a[@target='_blank'][contains(text(),'Договір підряду')]//ancestor::h3[@class='name']/span[@class='document-version'][contains(text(),'$1')]";
-    String ДОДАТОК_КОМЕРЦІЙНА_ТАЄМНИЦЯ_DOCUMENT = "//tr[@class='yui-dt-rec yui-dt-odd']//a[contains(text(),'Додаток комерційна таємниця ФОП ')][contains(text(),'.docx')]";
+    String ДОДАТОК_КОМЕРЦІЙНА_ТАЄМНИЦЯ_DOCUMENT = "//tr[contains(@class,\"yui-dt-rec yui-dt-odd\")]//a[contains(text(),'Додаток комерційна таємниця ФОП ')][contains(text(),'.docx')]";
     String DOCUMENT_VERSION_FOR_ДОДАТОК_КОМЕРЦІЙНА_ТАЄМНИЦЯ_DOCUMENT = "//a[@target='_blank'][contains(text(),'Додаток комерційна таємниця')]//ancestor::h3[@class='name']/span[@class='document-version'][contains(text(),'$1')]";
     String ЗАМОВЛЕННЯ_DOCUMENT = "//tr[@class='yui-dt-rec yui-dt-last yui-dt-even']//a[contains(text(),'Замовлення ФОП ')][contains(text(),' від ')][contains(text(),'.docx')]";
     String ДАТА_УКЛАДАННЯ_ЗАМОВЛЕННЯ_FOR_ЗАМОВЛЕННЯ_DOCUMENT = "//tr[@class='yui-dt-rec yui-dt-last yui-dt-even']//a[contains(text(),'$1')]";
@@ -92,6 +92,7 @@ public interface LOCATORS {
     String GENERATE_BUTTON_IN_THE_REGENERATE_DOCUMENT_POPUP = "(//button[.='Generate'])[1]";
     String CONTRACT_DATE_INSIDE_THE_ДОГОВІР_ПІДРЯДУ_MESSAGE_IN_THE_POPUP = "//div[@class='bd'][contains(text(),'$1')]";
     String APPROPRIATE_MESSAGE_FOR_ДОГОВІР_ПІДРЯДУ_IN_THE_POPUP = "//div[@class='bd'][contains(text(),'Договір підряду №')][contains(text(),' від ')][contains(text(),' ФОП ')][contains(text(),'.docx updated successfully')]";
-    String UPDATE_CURRENT_DOCUMENT_PRESELECTED_CHECKBOX = "//input[@name='-']//ancestor::span[@class='span-align regenerate-radio-span']/input[@id='template_x002e_section2_x002e_employee-documents_x0023_default_isUpdate-input'][@value='true']";
-
+    String UPDATE_CURRENT_DOCUMENT_PRESELECTED_CHECKBOX = "//label[@class='label-align'][contains(text(),'Update current document')]//ancestor::span[@class='span-align regenerate-radio-span']//input[@id='template_x002e_section2_x002e_employee-documents_x0023_default_isUpdate_true']";
+    String ДАТА_УКЛАДАННЯ_УГОДИ_FIELD_IN_THE_REGENERATE_DOCUMENT_POPUP = "//input[@id='template_x002e_section2_x002e_employee-documents_x0023_default_field.agreement.startDate-ctrl-date']";
+    String APPROPRIATE_MESSAGE_FOR_ДОДАТОК_КОМЕРЦІЙНА_ТАЄМНИЦЯ_IN_THE_POPUP = "//div[@class='bd'][contains(text(),'Додаток комерційна таємниця ФОП ')][contains(text(),'.docx updated successfully')]";
 }

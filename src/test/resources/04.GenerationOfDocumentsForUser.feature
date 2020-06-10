@@ -80,9 +80,8 @@ Feature: verifying document generation
     Then "Document" page is opened
     Then Додаток комерційна таємниця document is displayed
     When click on the Додаток комерційна таємниця document
-
-    When Додаток комерційна таємниця document is opened in OnlyOffice
-
+    When switch to second tab
+#    When Додаток комерційна таємниця document is opened in OnlyOffice
     Then "Fri 1 May 2020" Contract Date is displayed correctly
     Then "2020-05-06" Дата укладення угоди is displayed correctly
 
@@ -95,7 +94,8 @@ Feature: verifying document generation
     Then "Document" page is opened
     Then Замовлення document is displayed
     When click on the Замовлення document
-    When Замовлення document is opened in OnlyOffice
+    When switch to second tab
+#    When Замовлення document is opened in OnlyOffice
     Then "Fri 1 May 2020" Contract Date is displayed correctly
     Then "2020-05-02" Дата завершення робіт is displayed correctly
     Then "2020-05-04" Дата передачі результатів роботи is displayed correctly

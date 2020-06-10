@@ -169,6 +169,7 @@ public class EndUserSteps extends ScenarioSteps {
 
     @Step
     public void clickMyProfileLink() {
+        Assert.assertTrue(documentPage.elementIsVisible(1,LOCATORS.MY_PROFLE_LINK));
         documentPage.clickMyProfileLink();
     }
 
@@ -346,6 +347,7 @@ public class EndUserSteps extends ScenarioSteps {
 
     @Step
     public void clickOnTheДодатокКомерційнаТаємницяDocument() {
+        documentPage.elementIsVisible(LOCATORS.ДОДАТОК_КОМЕРЦІЙНА_ТАЄМНИЦЯ_DOCUMENT);
         documentPage.clickOnTheДодатокКомерційнаТаємницяDocument();
     }
 
@@ -366,6 +368,7 @@ public class EndUserSteps extends ScenarioSteps {
 
     @Step
     public void clickOnTheЗамовленняDocument() {
+        documentPage.elementIsVisible(LOCATORS.ЗАМОВЛЕННЯ_DOCUMENT);
         documentPage.clickOnTheЗамовленняDocument();
     }
 
@@ -436,11 +439,13 @@ public class EndUserSteps extends ScenarioSteps {
 
     @Step
     public void enterInTheContractDateFieldInTheRegenerateDocumentPopUp(String arg0) {
+        documentPage.elementIsVisible(1, LOCATORS.CONTRACT_DATE_FIELD_IN_THE_REGENERATE_DOCUMENT_POPUP);
         documentPage.enterInTheContractDateFieldInTheRegenerateDocumentPopUp(arg0);
     }
 
     @Step
     public void enterInTheДатаЗакінченняДоговоруFieldInTheRegenerateDocumentPopUp(String arg0) {
+        documentPage.elementIsVisible(1, LOCATORS.ДАТА_ЗАКІНЧЕННЯ_ДОГОВОРУ_FIELD_IN_THE_REGENERATE_DOCUMENT_POPUP);
         documentPage.enterInTheДатаЗакінченняДоговоруFieldInTheRegenerateDocumentPopUp(arg0);
     }
 
@@ -461,6 +466,7 @@ public class EndUserSteps extends ScenarioSteps {
 
     @Step
     public void договірПідрядуDocumentIsRegenerated() {
+        Assert.assertTrue(documentPage.elementIsVisible(1,LOCATORS.ДОГОВІР_ПІДРЯДУ_DOCUMENT));
         Assert.assertTrue("False", documentPage.договірПідрядуDocumentIsRegenerated());
     }
 
@@ -469,7 +475,9 @@ public class EndUserSteps extends ScenarioSteps {
         documentPage.clickSecondRegenerateIconNearTheDocument(arg0);
     }
 
+    @Step
     public void checkboxIsPreselectedOnTheUpdateCurrentDocument() {
+        Assert.assertTrue(documentPage.elementIsVisible(1,LOCATORS.UPDATE_CURRENT_DOCUMENT_PRESELECTED_CHECKBOX));
         Assert.assertTrue("False", documentPage.checkboxIsPreselectedOnTheUpdateCurrentDocument());
     }
 
@@ -481,5 +489,22 @@ public class EndUserSteps extends ScenarioSteps {
     @Step
     public void switchToFirstTab() {
         documentPage.switchToFirstTab();
+    }
+
+    @Step
+    public void enterInTheДатаУкладенняУгодиFieldInTheRegenerateDocumentPopUp(String arg0) {
+        documentPage.elementIsVisible(1, LOCATORS.ДАТА_УКЛАДАННЯ_УГОДИ_FIELD_IN_THE_REGENERATE_DOCUMENT_POPUP);
+        documentPage.enterInTheДатаУкладенняУгодиFieldInTheRegenerateDocumentPopUp(arg0);
+    }
+
+    @Step
+    public void appropriateMessageForДодатокКомерційнаТаємницяIsDisplayed() {
+        Assert.assertTrue("False", documentPage.appropriateMessageForДодатокКомерційнаТаємницяIsDisplayed());
+    }
+
+    @Step
+    public void додатокКомерційнаТаємницяIsRegenerated() {
+        Assert.assertTrue(documentPage.elementIsVisible(1,LOCATORS.ДОДАТОК_КОМЕРЦІЙНА_ТАЄМНИЦЯ_DOCUMENT));
+        Assert.assertTrue("False", documentPage.додатокКомерційнаТаємницяIsRegenerated());
     }
 }

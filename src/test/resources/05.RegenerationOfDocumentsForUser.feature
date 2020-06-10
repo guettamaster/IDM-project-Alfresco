@@ -34,7 +34,8 @@ Feature: verifying document regeneration
     Then "2020-06-06" Contract Date for Договір підряду document is displayed correctly
     Then "1.1" document version for Договір підряду document is presented
     When click on the Договір підряду document
-    When Договір підряду document is opened in OnlyOffice
+    When switch to second tab
+#    When Договір підряду document is opened in OnlyOffice
     Then "Sat 6 Jun 2020" Contract Date is displayed correctly
     Then "2020-07-07" Дата закінчення договору is displayed correctly
 
@@ -48,7 +49,7 @@ Feature: verifying document regeneration
     Then Generate Documents block is displayed
     Then Generated Documents block is displayed
     Then Договір підряду document is displayed
-    Then "1.0" document version for Договір підряду document is presented
+    Then "1.1" document version for Договір підряду document is presented
     Then Додаток комерційна таємниця document is displayed
     Then "1.0" document version for Додаток комерційна таємниця document is presented
     Then Замовлення document is displayed
@@ -57,8 +58,16 @@ Feature: verifying document regeneration
     Then Regenerate Document pop-up is appeared
     Then checkbox is preselected on the Update current document
     When enter "2/2/2020" in the Contract Date field in the Regenerate Document pop-up
-#    When enter "3/3/2020" in the Дата укладення угоди field in the Regenerate Document pop-up
-#    When click on Generate button in the Regenerate Document pop-up
+    When enter "3/3/2020" in the Дата укладення угоди field in the Regenerate Document pop-up
+    When click on Generate button in the Regenerate Document pop-up
+    Then appropriate message for Додаток комерційна таємниця is displayed
+    When click OK button
+    Then Додаток комерційна таємниця is regenerated
+    Then "1.1" document version for Додаток комерційна таємниця document is presented
+    When click on the Додаток комерційна таємниця document
+    When switch to second tab
+    Then "Sun 2 Feb 2020" Contract Date is displayed correctly
+    Then "2020-03-03" Дата укладення угоди is displayed correctly
 
   Scenario: 5.004 Check that Замовлення document is regenerated
     When click on the "Oleg Ivankovckyi" user name
@@ -70,9 +79,9 @@ Feature: verifying document regeneration
     Then Generate Documents block is displayed
     Then Generated Documents block is displayed
     Then Договір підряду document is displayed
-    Then "1.0" document version for Договір підряду document is presented
+    Then "1.1" document version for Договір підряду document is presented
     Then Додаток комерційна таємниця document is displayed
-    Then "1.0" document version for Додаток комерційна таємниця document is presented
+    Then "1.1" document version for Додаток комерційна таємниця document is presented
     Then Замовлення document is displayed
     Then "1.0" document version for Замовлення document is presented
     When click third Regenerate icon near the "Замовлення" document
