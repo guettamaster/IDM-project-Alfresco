@@ -85,3 +85,6 @@ Feature: verifying document regeneration
     Then Замовлення document is displayed
     Then "1.0" document version for Замовлення document is presented
     When click third Regenerate icon near the "Замовлення" document
+    Then Regenerate Document pop-up is appeared
+    Then checkbox is preselected on the Update current document
+    When enter "8/8/2020" in the Contract Date field in the Regenerate Document pop-up

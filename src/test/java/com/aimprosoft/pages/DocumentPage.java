@@ -309,7 +309,6 @@ public class DocumentPage extends net.serenitybdd.core.pages.PageObject {
         $(LOCATORS.CONTRACT_DATE_FIELD_IN_THE_REGENERATE_DOCUMENT_POPUP.replace("$1", arg0)).sendKeys(arg0);
         actions.moveToElement(find(By.xpath(LOCATORS.CONTRACT_DATE_FIELD_IN_THE_REGENERATE_DOCUMENT_POPUP.replace("$1", arg0))));
         actions.build().perform();
-        waitABit(15000);
     }
 
     public void enterInTheДатаЗакінченняДоговоруFieldInTheRegenerateDocumentPopUp(String arg0) {
@@ -395,5 +394,10 @@ public class DocumentPage extends net.serenitybdd.core.pages.PageObject {
     public boolean додатокКомерційнаТаємницяIsRegenerated() {
         withTimeoutOf(25, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(net.serenitybdd.core.annotations.findby.By.xpath(LOCATORS.ДОДАТОК_КОМЕРЦІЙНА_ТАЄМНИЦЯ_DOCUMENT)));
         return $(LOCATORS.ДОДАТОК_КОМЕРЦІЙНА_ТАЄМНИЦЯ_DOCUMENT).isPresent();
+    }
+
+    public void clickThirdRegenerateIconNearTheDocument(String arg0) {
+        withTimeoutOf(20, TimeUnit.SECONDS).waitFor(ExpectedConditions.presenceOfElementLocated(org.openqa.selenium.By.xpath(LOCATORS.REGENERATE_ICON_NEAR_ЗАМОВЛЕННЯ_DOCUMENT.replace("$1", arg0))));
+        evaluateJavascript("arguments[0].click();", $(LOCATORS.REGENERATE_ICON_NEAR_ЗАМОВЛЕННЯ_DOCUMENT.replace("$1", arg0)));
     }
 }

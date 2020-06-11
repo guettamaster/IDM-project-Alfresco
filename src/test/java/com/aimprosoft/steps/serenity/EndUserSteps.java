@@ -507,4 +507,9 @@ public class EndUserSteps extends ScenarioSteps {
         Assert.assertTrue(documentPage.elementIsVisible(1,LOCATORS.ДОДАТОК_КОМЕРЦІЙНА_ТАЄМНИЦЯ_DOCUMENT));
         Assert.assertTrue("False", documentPage.додатокКомерційнаТаємницяIsRegenerated());
     }
+
+    @Step
+    public void clickThirdRegenerateIconNearTheDocument(String arg0) {
+        documentPage.clickThirdRegenerateIconNearTheDocument(arg0);
+    }
 }

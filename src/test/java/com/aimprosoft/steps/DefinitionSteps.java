@@ -497,4 +497,9 @@ public class DefinitionSteps {
     public void додатокКомерційнаТаємницяIsRegenerated() {
         endUserSteps.додатокКомерційнаТаємницяIsRegenerated();
     }
+
+    @When("^click third Regenerate icon near the \"([^\"]*)\" document$")
+    public void clickThirdRegenerateIconNearTheDocument(String arg0) throws Throwable {
+        endUserSteps.clickThirdRegenerateIconNearTheDocument(arg0);
+    }
 }
