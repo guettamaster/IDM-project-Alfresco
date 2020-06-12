@@ -502,4 +502,34 @@ public class DefinitionSteps {
     public void clickThirdRegenerateIconNearTheDocument(String arg0) throws Throwable {
         endUserSteps.clickThirdRegenerateIconNearTheDocument(arg0);
     }
+
+    @When("^clear data in the Вартість замовлення field in the Regenerate Document pop-up$")
+    public void clearDataInTheВартістьЗамовленняFieldInTheRegenerateDocumentPopUp() {
+        endUserSteps.clearDataInTheВартістьЗамовленняFieldInTheRegenerateDocumentPopUp();
+    }
+
+    @When("^enter \"([^\"]*)\" in the Вартість замовлення field in the Regenerate Document pop-up$")
+    public void enterInTheВартістьЗамовленняFieldInTheRegenerateDocumentPopUp(String arg0) throws Throwable {
+        endUserSteps.enterInTheВартістьЗамовленняFieldInTheRegenerateDocumentPopUp(arg0);
+    }
+
+    @When("^enter \"([^\"]*)\" in the Дата укладення замовлення field in the Regenerate Document pop-up$")
+    public void enterInTheДатаУкладенняЗамовленняFieldInTheRegenerateDocumentPopUp(String arg0) throws Throwable {
+        endUserSteps.enterInTheДатаУкладенняЗамовленняFieldInTheRegenerateDocumentPopUp(arg0);
+    }
+
+    @When("^enter \"([^\"]*)\" in the Дата завершення робіт field in the Regenerate Document pop-up$")
+    public void enterInTheДатаЗавершенняРобітFieldInTheRegenerateDocumentPopUp(String arg0) throws Throwable {
+        endUserSteps.enterInTheДатаЗавершенняРобітFieldInTheRegenerateDocumentPopUp(arg0);
+    }
+
+    @When("^enter \"([^\"]*)\" in the Дата передачі результатів роботи field in the Regenerate Document pop-up$")
+    public void enterInTheДатаПередачіРезультатівРоботиFieldInTheRegenerateDocumentPopUp(String arg0) throws Throwable {
+        endUserSteps.enterInTheДатаПередачіРезультатівРоботиFieldInTheRegenerateDocumentPopUp(arg0);
+    }
+
+    @When("^enter \"([^\"]*)\" in the Дата початку виконання робіт field in the Regenerate Document pop-up$")
+    public void enterInTheДатаПочаткуВиконанняРобітFieldInTheRegenerateDocumentPopUp(String arg0) throws Throwable {
+        endUserSteps.enterInTheДатаПочаткуВиконанняРобітFieldInTheRegenerateDocumentPopUp(arg0);
+    }
 }

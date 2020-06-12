@@ -88,3 +88,12 @@ Feature: verifying document regeneration
     Then Regenerate Document pop-up is appeared
     Then checkbox is preselected on the Update current document
     When enter "8/8/2020" in the Contract Date field in the Regenerate Document pop-up
+    When clear data in the Вартість замовлення field in the Regenerate Document pop-up
+    When enter "777" in the Вартість замовлення field in the Regenerate Document pop-up
+    When enter "8/9/2020" in the Дата укладення замовлення field in the Regenerate Document pop-up
+    When enter "8/10/2020" in the Дата завершення робіт field in the Regenerate Document pop-up
+    When enter "8/11/2020" in the Дата передачі результатів роботи field in the Regenerate Document pop-up
+    When enter "8/12/2020" in the Дата початку виконання робіт field in the Regenerate Document pop-up
+    When click on Generate button in the Regenerate Document pop-up
+    Then appropriate message for Замовлення is displayed
+

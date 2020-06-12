@@ -95,4 +95,10 @@ public interface LOCATORS {
     String UPDATE_CURRENT_DOCUMENT_PRESELECTED_CHECKBOX = "//label[@class='label-align'][contains(text(),'Update current document')]//ancestor::span[@class='span-align regenerate-radio-span']//input[@id='template_x002e_section2_x002e_employee-documents_x0023_default_isUpdate_true']";
     String ДАТА_УКЛАДАННЯ_УГОДИ_FIELD_IN_THE_REGENERATE_DOCUMENT_POPUP = "//input[@id='template_x002e_section2_x002e_employee-documents_x0023_default_field.agreement.startDate-ctrl-date']";
     String APPROPRIATE_MESSAGE_FOR_ДОДАТОК_КОМЕРЦІЙНА_ТАЄМНИЦЯ_IN_THE_POPUP = "//div[@class='bd'][contains(text(),'Додаток комерційна таємниця ФОП ')][contains(text(),'.docx updated successfully')]";
+    String ВАРТІСТЬ_ЗАМОВЛЕННЯ_FIELD_IN_THE_REGENERATE_DOCUMENT_POPUP = "//input[@id='template_x002e_section2_x002e_employee-documents_x0023_default_field.orderCost.number']";
+    String ДАТА_УКЛАДАННЯ_ЗАМОВЛЕННЯ_FIELD_IN_THE_REGENERATE_DOCUMENT_POPUP = "//input[@id='template_x002e_section2_x002e_employee-documents_x0023_default_field.order.startDate-ctrl-date']";
+    String ДАТА_ЗАВЕРШЕННЯ_РОБІТ_FIELD_IN_THE_REGENERATE_DOCUMENT_POPUP = "//input[@id='template_x002e_section2_x002e_employee-documents_x0023_default_field.commencementWork.endDate-ctrl-date']";
+    String ДАТА_ПЕРЕДАЧІ_РЕЗУЛЬТАТІВ_РОБОТИ_FIELD_IN_THE_REGENERATE_DOCUMENT_POPUP = "//input[@id='template_x002e_section2_x002e_employee-documents_x0023_default_field.workResults.transferDate-ctrl-date']";
+    String ДАТА_ПОЧАТКУ_ВИКОНАННЯ_РОБІТ_FIELD_IN_THE_REGENERATE_DOCUMENT_POPUP = "//input[@id='template_x002e_section2_x002e_employee-documents_x0023_default_field.commencementWork.startDate-ctrl-date']";
+
 }

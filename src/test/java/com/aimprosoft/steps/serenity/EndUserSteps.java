@@ -493,7 +493,7 @@ public class EndUserSteps extends ScenarioSteps {
 
     @Step
     public void enterInTheДатаУкладенняУгодиFieldInTheRegenerateDocumentPopUp(String arg0) {
-        documentPage.elementIsVisible(1, LOCATORS.ДАТА_УКЛАДАННЯ_УГОДИ_FIELD_IN_THE_REGENERATE_DOCUMENT_POPUP);
+        documentPage.elementIsVisible(LOCATORS.ДАТА_УКЛАДАННЯ_УГОДИ_FIELD_IN_THE_REGENERATE_DOCUMENT_POPUP);
         documentPage.enterInTheДатаУкладенняУгодиFieldInTheRegenerateDocumentPopUp(arg0);
     }
 
@@ -511,5 +511,40 @@ public class EndUserSteps extends ScenarioSteps {
     @Step
     public void clickThirdRegenerateIconNearTheDocument(String arg0) {
         documentPage.clickThirdRegenerateIconNearTheDocument(arg0);
+    }
+
+    @Step
+    public void clearDataInTheВартістьЗамовленняFieldInTheRegenerateDocumentPopUp() {
+        documentPage.clearDataInTheВартістьЗамовленняFieldInTheRegenerateDocumentPopUp();
+    }
+
+    @Step
+    public void enterInTheВартістьЗамовленняFieldInTheRegenerateDocumentPopUp(String arg0) {
+        documentPage.elementIsVisible(LOCATORS.ВАРТІСТЬ_ЗАМОВЛЕННЯ_FIELD_IN_THE_REGENERATE_DOCUMENT_POPUP);
+        documentPage.enterInTheВартістьЗамовленняFieldInTheRegenerateDocumentPopUp(arg0);
+    }
+
+    @Step
+    public void enterInTheДатаУкладенняЗамовленняFieldInTheRegenerateDocumentPopUp(String arg0) {
+        documentPage.elementIsVisible(LOCATORS.ДАТА_УКЛАДАННЯ_ЗАМОВЛЕННЯ_FIELD_IN_THE_REGENERATE_DOCUMENT_POPUP);
+        documentPage.enterInTheДатаУкладенняЗамовленняFieldInTheRegenerateDocumentPopUp(arg0);
+    }
+
+    @Step
+    public void enterInTheДатаЗавершенняРобітFieldInTheRegenerateDocumentPopUp(String arg0) {
+        documentPage.elementIsVisible(LOCATORS.ДАТА_ЗАВЕРШЕННЯ_РОБІТ_FIELD_IN_THE_REGENERATE_DOCUMENT_POPUP);
+        documentPage.enterInTheДатаЗавершенняРобітFieldInTheRegenerateDocumentPopUp(arg0);
+    }
+
+    @Step
+    public void enterInTheДатаПередачіРезультатівРоботиFieldInTheRegenerateDocumentPopUp(String arg0) {
+        documentPage.elementIsVisible(LOCATORS.ДАТА_ПЕРЕДАЧІ_РЕЗУЛЬТАТІВ_РОБОТИ_FIELD_IN_THE_REGENERATE_DOCUMENT_POPUP);
+        documentPage.enterInTheДатаПередачіРезультатівРоботиFieldInTheRegenerateDocumentPopUp(arg0);
+    }
+
+    @Step
+    public void enterInTheДатаПочаткуВиконанняРобітFieldInTheRegenerateDocumentPopUp(String arg0) {
+        documentPage.elementIsVisible(LOCATORS.ДАТА_ПОЧАТКУ_ВИКОНАННЯ_РОБІТ_FIELD_IN_THE_REGENERATE_DOCUMENT_POPUP);
+        documentPage.enterInTheДатаПочаткуВиконанняРобітFieldInTheRegenerateDocumentPopUp(arg0);
     }
 }

@@ -400,4 +400,44 @@ public class DocumentPage extends net.serenitybdd.core.pages.PageObject {
         withTimeoutOf(20, TimeUnit.SECONDS).waitFor(ExpectedConditions.presenceOfElementLocated(org.openqa.selenium.By.xpath(LOCATORS.REGENERATE_ICON_NEAR_ЗАМОВЛЕННЯ_DOCUMENT.replace("$1", arg0))));
         evaluateJavascript("arguments[0].click();", $(LOCATORS.REGENERATE_ICON_NEAR_ЗАМОВЛЕННЯ_DOCUMENT.replace("$1", arg0)));
     }
+
+    public void clearDataInTheВартістьЗамовленняFieldInTheRegenerateDocumentPopUp() {
+        $(LOCATORS.ВАРТІСТЬ_ЗАМОВЛЕННЯ_FIELD_IN_THE_REGENERATE_DOCUMENT_POPUP).clear();
+    }
+
+    public void enterInTheВартістьЗамовленняFieldInTheRegenerateDocumentPopUp(String arg0) {
+        Actions actions = new Actions(getDriver());
+        $(LOCATORS.ВАРТІСТЬ_ЗАМОВЛЕННЯ_FIELD_IN_THE_REGENERATE_DOCUMENT_POPUP.replace("$1", arg0)).sendKeys(arg0);
+        actions.moveToElement(find(By.xpath(LOCATORS.ВАРТІСТЬ_ЗАМОВЛЕННЯ_FIELD_IN_THE_REGENERATE_DOCUMENT_POPUP.replace("$1", arg0))));
+        actions.build().perform();
+    }
+
+    public void enterInTheДатаУкладенняЗамовленняFieldInTheRegenerateDocumentPopUp(String arg0) {
+        Actions actions = new Actions(getDriver());
+        $(LOCATORS.ДАТА_УКЛАДАННЯ_ЗАМОВЛЕННЯ_FIELD_IN_THE_REGENERATE_DOCUMENT_POPUP.replace("$1", arg0)).sendKeys(arg0);
+        actions.moveToElement(find(By.xpath(LOCATORS.ДАТА_УКЛАДАННЯ_ЗАМОВЛЕННЯ_FIELD_IN_THE_REGENERATE_DOCUMENT_POPUP.replace("$1", arg0))));
+        actions.build().perform();
+    }
+
+    public void enterInTheДатаЗавершенняРобітFieldInTheRegenerateDocumentPopUp(String arg0) {
+        Actions actions = new Actions(getDriver());
+        $(LOCATORS.ДАТА_ЗАВЕРШЕННЯ_РОБІТ_FIELD_IN_THE_REGENERATE_DOCUMENT_POPUP.replace("$1", arg0)).sendKeys(arg0);
+        actions.moveToElement(find(By.xpath(LOCATORS.ДАТА_ЗАВЕРШЕННЯ_РОБІТ_FIELD_IN_THE_REGENERATE_DOCUMENT_POPUP.replace("$1", arg0))));
+        actions.build().perform();
+    }
+
+    public void enterInTheДатаПередачіРезультатівРоботиFieldInTheRegenerateDocumentPopUp(String arg0) {
+        Actions actions = new Actions(getDriver());
+        $(LOCATORS.ДАТА_ПЕРЕДАЧІ_РЕЗУЛЬТАТІВ_РОБОТИ_FIELD_IN_THE_REGENERATE_DOCUMENT_POPUP.replace("$1", arg0)).sendKeys(arg0);
+        actions.moveToElement(find(By.xpath(LOCATORS.ДАТА_ПЕРЕДАЧІ_РЕЗУЛЬТАТІВ_РОБОТИ_FIELD_IN_THE_REGENERATE_DOCUMENT_POPUP.replace("$1", arg0))));
+        actions.build().perform();
+    }
+
+    public void enterInTheДатаПочаткуВиконанняРобітFieldInTheRegenerateDocumentPopUp(String arg0) {
+        Actions actions = new Actions(getDriver());
+        $(LOCATORS.ДАТА_ПОЧАТКУ_ВИКОНАННЯ_РОБІТ_FIELD_IN_THE_REGENERATE_DOCUMENT_POPUP.replace("$1", arg0)).sendKeys(arg0);
+        actions.moveToElement(find(By.xpath(LOCATORS.ДАТА_ПОЧАТКУ_ВИКОНАННЯ_РОБІТ_FIELD_IN_THE_REGENERATE_DOCUMENT_POPUP.replace("$1", arg0))));
+        actions.build().perform();
+        waitABit(7000);
+    }
 }
