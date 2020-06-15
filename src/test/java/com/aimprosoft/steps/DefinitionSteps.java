@@ -532,4 +532,14 @@ public class DefinitionSteps {
     public void enterInTheДатаПочаткуВиконанняРобітFieldInTheRegenerateDocumentPopUp(String arg0) throws Throwable {
         endUserSteps.enterInTheДатаПочаткуВиконанняРобітFieldInTheRegenerateDocumentPopUp(arg0);
     }
+
+    @Then("^appropriate message for Замовлення is displayed$")
+    public void appropriateMessageForЗамовленняIsDisplayed() {
+        endUserSteps.appropriateMessageForЗамовленняIsDisplayed();
+    }
+
+    @Then("^Замовлення is regenerated$")
+    public void замовленняIsRegenerated() {
+        endUserSteps.замовленняIsRegenerated();
+    }
 }

@@ -96,4 +96,15 @@ Feature: verifying document regeneration
     When enter "8/12/2020" in the Дата початку виконання робіт field in the Regenerate Document pop-up
     When click on Generate button in the Regenerate Document pop-up
     Then appropriate message for Замовлення is displayed
+    When click OK button
+    Then Замовлення is regenerated
+    Then "1.1" document version for Замовлення document is presented
+    When click on the Замовлення document
+    When switch to second tab
+    Then "Sat 8 Aug 2020" Contract Date is displayed correctly
+    Then "2020-10-08" Дата завершення робіт is displayed correctly
+    Then "2020-11-08" Дата передачі результатів роботи is displayed correctly
+    Then "2020-12-08" Дата початку виконання робіт is displayed correctly
+    Then "2020-09-08" Дата укладення замовлення is displayed correctly
+    Then "777" Вартість замовлення is displayed correctly
 

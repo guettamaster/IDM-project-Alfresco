@@ -438,6 +438,15 @@ public class DocumentPage extends net.serenitybdd.core.pages.PageObject {
         $(LOCATORS.ДАТА_ПОЧАТКУ_ВИКОНАННЯ_РОБІТ_FIELD_IN_THE_REGENERATE_DOCUMENT_POPUP.replace("$1", arg0)).sendKeys(arg0);
         actions.moveToElement(find(By.xpath(LOCATORS.ДАТА_ПОЧАТКУ_ВИКОНАННЯ_РОБІТ_FIELD_IN_THE_REGENERATE_DOCUMENT_POPUP.replace("$1", arg0))));
         actions.build().perform();
-        waitABit(7000);
+    }
+
+    public boolean appropriateMessageForЗамовленняIsDisplayed() {
+        withTimeoutOf(30, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(net.serenitybdd.core.annotations.findby.By.xpath(LOCATORS.APPROPRIATE_MESSAGE_FOR_ЗАМОВЛЕННЯ_IN_THE_POPUP)));
+        return $(LOCATORS.APPROPRIATE_MESSAGE_FOR_ЗАМОВЛЕННЯ_IN_THE_POPUP).isPresent();
+    }
+
+    public boolean замовленняIsRegenerated() {
+        withTimeoutOf(25, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(net.serenitybdd.core.annotations.findby.By.xpath(LOCATORS.ЗАМОВЛЕННЯ_DOCUMENT)));
+        return $(LOCATORS.ЗАМОВЛЕННЯ_DOCUMENT).isPresent();
     }
 }

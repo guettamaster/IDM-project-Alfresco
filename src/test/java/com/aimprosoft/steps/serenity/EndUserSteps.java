@@ -547,4 +547,15 @@ public class EndUserSteps extends ScenarioSteps {
         documentPage.elementIsVisible(LOCATORS.ДАТА_ПОЧАТКУ_ВИКОНАННЯ_РОБІТ_FIELD_IN_THE_REGENERATE_DOCUMENT_POPUP);
         documentPage.enterInTheДатаПочаткуВиконанняРобітFieldInTheRegenerateDocumentPopUp(arg0);
     }
+
+    @Step
+    public void appropriateMessageForЗамовленняIsDisplayed() {
+        Assert.assertTrue("False", documentPage.appropriateMessageForЗамовленняIsDisplayed());
+    }
+
+    @Step
+    public void замовленняIsRegenerated() {
+        Assert.assertTrue(documentPage.elementIsVisible(1,LOCATORS.ЗАМОВЛЕННЯ_DOCUMENT));
+        Assert.assertTrue("False", documentPage.замовленняIsRegenerated());
+    }
 }

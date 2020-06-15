@@ -100,5 +100,6 @@ public interface LOCATORS {
     String ДАТА_ЗАВЕРШЕННЯ_РОБІТ_FIELD_IN_THE_REGENERATE_DOCUMENT_POPUP = "//input[@id='template_x002e_section2_x002e_employee-documents_x0023_default_field.commencementWork.endDate-ctrl-date']";
     String ДАТА_ПЕРЕДАЧІ_РЕЗУЛЬТАТІВ_РОБОТИ_FIELD_IN_THE_REGENERATE_DOCUMENT_POPUP = "//input[@id='template_x002e_section2_x002e_employee-documents_x0023_default_field.workResults.transferDate-ctrl-date']";
     String ДАТА_ПОЧАТКУ_ВИКОНАННЯ_РОБІТ_FIELD_IN_THE_REGENERATE_DOCUMENT_POPUP = "//input[@id='template_x002e_section2_x002e_employee-documents_x0023_default_field.commencementWork.startDate-ctrl-date']";
+    String APPROPRIATE_MESSAGE_FOR_ЗАМОВЛЕННЯ_IN_THE_POPUP = "//div[@class='bd'][contains(text(),'Замовлення ФОП')][contains(text(),' від ')][contains(text(),'.docx updated successfully')]";
 
 }
