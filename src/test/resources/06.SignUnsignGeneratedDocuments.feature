@@ -31,3 +31,12 @@ Feature: verifying sign/unsign documents
 
 
   Scenario: 6.004 Check that all generated documents are unsigned
+    When click on the "Oleg Ivankovckyi" user name
+    Then user menu is appeared
+    When click My Profile link
+    Then User Profile page is opened
+    When click the "Documents" link
+    Then "Document" page is opened
+    Then Generate Documents block is displayed
+    Then Generated Documents block is displayed
+    Then Договір підряду document is displayed
