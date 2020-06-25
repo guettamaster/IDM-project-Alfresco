@@ -542,4 +542,9 @@ public class DefinitionSteps {
     public void замовленняIsRegenerated() {
         endUserSteps.замовленняIsRegenerated();
     }
+
+    @When("^click Mark as signed icon near the \"([^\"]*)\" document$")
+    public void clickMarkAsSignedIconNearTheDocument(String arg0) throws Throwable {
+        endUserSteps.clickMarkAsSignedIconNearTheDocument(arg0);
+    }
 }

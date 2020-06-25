@@ -558,4 +558,9 @@ public class EndUserSteps extends ScenarioSteps {
         Assert.assertTrue(documentPage.elementIsVisible(1,LOCATORS.ЗАМОВЛЕННЯ_DOCUMENT));
         Assert.assertTrue("False", documentPage.замовленняIsRegenerated());
     }
+
+    @Step
+    public void clickMarkAsSignedIconNearTheDocument(String arg0) {
+        documentPage.clickMarkAsSignedIconNearTheDocument(arg0);
+    }
 }

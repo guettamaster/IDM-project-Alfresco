@@ -27,6 +27,10 @@ Feature: verifying sign/unsign documents
     Then Generate Documents block is displayed
     Then Generated Documents block is displayed
     Then Договір підряду document is displayed
+    Then "2020-06-06" Contract Date for Договір підряду document is displayed correctly
+    Then "1.1" document version for Договір підряду document is presented
+    When click Mark as signed icon near the "Договір підряду" document
+    Then Mark document as signed pop-up is appeared
 
 
 

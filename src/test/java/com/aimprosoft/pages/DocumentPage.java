@@ -449,4 +449,10 @@ public class DocumentPage extends net.serenitybdd.core.pages.PageObject {
         withTimeoutOf(25, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(net.serenitybdd.core.annotations.findby.By.xpath(LOCATORS.ЗАМОВЛЕННЯ_DOCUMENT)));
         return $(LOCATORS.ЗАМОВЛЕННЯ_DOCUMENT).isPresent();
     }
+
+    public void clickMarkAsSignedIconNearTheDocument(String arg0) {
+        withTimeoutOf(20, TimeUnit.SECONDS).waitFor(ExpectedConditions.presenceOfElementLocated(org.openqa.selenium.By.xpath(LOCATORS.MARK_AS_SIGNED_ICON_NEAR_ДОГОВІР_ПІДРЯДУ_DOCUMENT.replace("$1", arg0))));
+        evaluateJavascript("arguments[0].click();", $(LOCATORS.MARK_AS_SIGNED_ICON_NEAR_ДОГОВІР_ПІДРЯДУ_DOCUMENT.replace("$1", arg0)));
+        waitABit(5000);
+    }
 }
