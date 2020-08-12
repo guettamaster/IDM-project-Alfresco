@@ -547,4 +547,9 @@ public class DefinitionSteps {
     public void clickMarkAsSignedIconNearTheDocument(String arg0) throws Throwable {
         endUserSteps.clickMarkAsSignedIconNearTheDocument(arg0);
     }
+
+    @Then("^Mark document as signed pop-up is appeared$")
+    public void markDocumentAsSignedPopUpIsAppeared() {
+        endUserSteps.markDocumentAsSignedPopUpIsAppeared();
+    }
 }

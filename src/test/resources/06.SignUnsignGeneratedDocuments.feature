@@ -31,7 +31,9 @@ Feature: verifying sign/unsign documents
     Then "1.1" document version for Договір підряду document is presented
     When click Mark as signed icon near the "Договір підряду" document
     Then Mark document as signed pop-up is appeared
-
+    When click on the Yes button
+    Then message pop-up is appeared
+    Then "Договір підряду" document is signed
 
 
   Scenario: 6.004 Check that all generated documents are unsigned

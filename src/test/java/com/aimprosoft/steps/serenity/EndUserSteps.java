@@ -563,4 +563,9 @@ public class EndUserSteps extends ScenarioSteps {
     public void clickMarkAsSignedIconNearTheDocument(String arg0) {
         documentPage.clickMarkAsSignedIconNearTheDocument(arg0);
     }
+
+    @Step
+    public void markDocumentAsSignedPopUpIsAppeared() {
+        Assert.assertTrue("False", documentPage.markDocumentAsSignedPopUpIsAppeared());
+    }
 }

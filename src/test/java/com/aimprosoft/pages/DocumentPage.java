@@ -455,4 +455,9 @@ public class DocumentPage extends net.serenitybdd.core.pages.PageObject {
         evaluateJavascript("arguments[0].click();", $(LOCATORS.MARK_AS_SIGNED_ICON_NEAR_ДОГОВІР_ПІДРЯДУ_DOCUMENT.replace("$1", arg0)));
         waitABit(5000);
     }
+
+    public boolean markDocumentAsSignedPopUpIsAppeared() {
+        withTimeoutOf(25, TimeUnit.SECONDS).waitFor(ExpectedConditions.visibilityOfElementLocated(net.serenitybdd.core.annotations.findby.By.xpath(LOCATORS.MARK_DOCUMENT_AS_SIGNED_TITLE_IN_THE_POPUP)));
+        return $(LOCATORS.MARK_DOCUMENT_AS_SIGNED_TITLE_IN_THE_POPUP).isPresent();
+    }
 }
