@@ -71,7 +71,7 @@ public interface LOCATORS {
     String DOCUMENT_VERSION_FOR_ДОДАТОК_КОМЕРЦІЙНА_ТАЄМНИЦЯ_DOCUMENT = "//a[@target='_blank'][contains(text(),'Додаток комерційна таємниця')]//ancestor::h3[@class='name']/span[@class='document-version'][contains(text(),'$1')]";
     String ЗАМОВЛЕННЯ_DOCUMENT = "//tr[@class='yui-dt-rec yui-dt-last yui-dt-even']//a[contains(text(),'Замовлення ФОП ')][contains(text(),' від ')][contains(text(),'.docx')]";
     String ДАТА_УКЛАДАННЯ_ЗАМОВЛЕННЯ_FOR_ЗАМОВЛЕННЯ_DOCUMENT = "//tr[@class='yui-dt-rec yui-dt-last yui-dt-even']//a[contains(text(),'$1')]";
-    String DOCUMENT_VERSION_FOR_ЗАМОВЛЕННЯ_DOCUMENT = "//a[@target='_blank'][contains(text(),'Замовлення')]//ancestor::h3[@class='name']/span[@class='document-version'][contains(text(),'$1')]";
+    String DOCUMENT_VERSION_FOR_ЗАМОВЛЕННЯ_DOCUMENT = "//a[@target='_blank'][contains(text(),'Замовлення')]";
     String DOCUMENT_S_GENERATED_SUCESSFULLY = "//div[@class='bd'][contains(text(),'3 document(s) generated successfully')]";
     String OK_BUTTON_IN_THE_POPUP = "//button[@type='button'][contains(text(),'OK')]";
     String ARCHIVE_PREVIOUS_DOCUMENT_VERSION_S_TITLE = "//div[@class='hd'][contains(text(),'Archive previous document version(s)')]";

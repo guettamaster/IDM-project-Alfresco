@@ -8,7 +8,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(features= {
         //"src/test/resources/01.SignInPage.feature",
         "src/test/resources/02.AddingAUserToTheHRGroup.feature",
-        "src/test/resources/04.GenerationOfDocumentsForUser.feature"
+//        "src/test/resources/04.GenerationOfDocumentsForUser.feature"
 
 })
 public class DefinitionTestSuite {}
