@@ -7,4 +7,4 @@ Feature: verifying user authorization
     Then home page is opened
     Then "Oleg Ivankovckyi" user name is displayed
 
-#    test git 11.04
+#    test git 11_04
